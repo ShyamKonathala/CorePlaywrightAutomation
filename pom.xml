@@ -31,13 +31,12 @@
             <version>1.54.0</version>
         </dependency>
 
-        <!-- TestNG -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.10.0</version>
-            <scope>test</scope>
-        </dependency>
+      <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.10.0</version>
+    </dependency>
 
         <!-- ExtentReports -->
         <dependency>
