@@ -12,9 +12,9 @@ import utils.ExcelDataProvider;
 public class TanksTest extends basetest {
 	@Test(dataProvider = "Tanks",dataProviderClass = ExcelDataProvider.class)
 	public void tanktest(String user, String pass,String tankNumber,String ManifestId,String record,String JobId) throws IOException {
-		LoginPage lo = new LoginPage(page);
+		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);
-		TanksPage tp = new TanksPage(page);
+		TanksPage tp = new TanksPage(getPage());
 		tp.Tnks(tankNumber,ManifestId);
 		tp.save();
 		tp.sampleAndNewWindow(record, JobId);

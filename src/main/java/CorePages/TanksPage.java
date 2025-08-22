@@ -6,6 +6,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
+import base.basetest;
 import utils.FileUtils;
 
 import java.io.IOException;
@@ -41,7 +42,7 @@ public class TanksPage {
 	//String JobId = "87056";
 	
 	public TanksPage(Page page) {
-		this.page = page;
+		this.page = basetest.getPage();
 		this.mainPage = page; 
 		
 		PP = page.locator("//span[contains(text(),'Plant Processing')]");

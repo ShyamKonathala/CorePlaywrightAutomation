@@ -8,6 +8,8 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
+import base.basetest;
+
 public class LoginPage {
 	
 	 private final Page page;
@@ -20,7 +22,7 @@ public class LoginPage {
 	    private final String dashboardFrame = "#frmMain"; // post-login element
 
 	    public LoginPage(Page page) {
-	        this.page = page;
+	        this.page = basetest.getPage();
 	        page.setDefaultTimeout(20000);
 	        
 	       

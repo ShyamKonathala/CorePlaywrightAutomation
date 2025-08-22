@@ -6,6 +6,8 @@ import com.microsoft.playwright.Download;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
+import base.basetest;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.logging.Logger;
@@ -48,7 +50,7 @@ public class ProfileRecertPage {
 		expexl = page.locator("//button[@id = 'btnExportToExcel']");
 		
 		
-		this.page = page;
+		this.page = basetest.getPage();
 	}
 	
 	public void recert() {

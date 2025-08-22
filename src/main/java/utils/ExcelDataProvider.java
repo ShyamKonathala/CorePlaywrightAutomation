@@ -21,6 +21,19 @@ public class ExcelDataProvider {
 		
 	}
 	
+	@DataProvider(name = "login")
+	public static Object[][] getData7() throws IOException{
+		String filepath = ConfigReader.get("excelFilePath");
+		
+		Object[][] data = new Object[1][2];
+		
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
+		
+		return data;
+		
+	}
+	
 	@DataProvider(name = "loginData2")
 	public static Object[][] getData6() throws IOException{
 		String filepath = ConfigReader.get("excelFilePath");
@@ -53,7 +66,7 @@ public class ExcelDataProvider {
 		
 		data[0][3] = ExcelUtils.getCellData(filepath, "TankNumber", 3, 2);//ManifestId
 		data[0][4] = ExcelUtils.getCellData(filepath, "TankNumber", 2, 1);//Record
-		data[0][5] = ExcelUtils.getCellData(filepath, "TankNumber", 1, 3); //JobId
+		data[0][5] = ExcelUtils.getCellData(filepath, "TankNumber", 3, 3); //JobId
 		
 		
 		

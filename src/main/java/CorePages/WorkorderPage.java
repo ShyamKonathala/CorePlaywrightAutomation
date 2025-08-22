@@ -12,6 +12,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Tracing;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
+import base.basetest;
 import utils.ConfigReader;
 import utils.ExcelUtils;
 
@@ -61,7 +62,7 @@ public class WorkorderPage {
 	
 	
 	public WorkorderPage(Page page) {
-		this.page = page;
+		this.page = basetest.getPage();
 		this.context = page.context();
 		
 		CP = page.locator("//ul[@class = 'rmRootGroup rmHorizontal']//span[contains(text(),'Customer Processing')]");
@@ -301,12 +302,13 @@ public class WorkorderPage {
 		for(int i = 1;i<=2;i++) {
 			String profile = ExcelUtils.getCellData(filepath, "ManifestProfiles", i, 0);
 			String DotName = ExcelUtils.getCellData(filepath, "ManifestProfiles", i, 1);
-		
+		page.waitForTimeout(10000);
 		prflearrw.click();
 		logger.info("Profile Arrow Clicked");
 		String prfvle = "//div[@id = 'ctl00_MainContent_DetailsView1_rcbProfileName_DropDown']/div/ul/li[contains(text(),'" + profile + "')]";
 		page.click(prfvle);
 		logger.info("Profile Value Selected");
+		page.waitForTimeout(10000);
 		
 		dtnarrw.click();
 		logger.info("Dot NAme Arrow Clicked");

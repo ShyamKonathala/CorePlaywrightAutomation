@@ -5,6 +5,8 @@ import java.util.logging.Logger;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
+import base.basetest;
+
 public class ProfileTonnagePage {
 	
 	private static final Logger logger = Logger.getLogger(ProfileTonnagePage.class.getName());
@@ -20,7 +22,7 @@ public class ProfileTonnagePage {
 	
 	public ProfileTonnagePage(Page page) {
 		
-		this.page = page;
+		this.page = basetest.getPage();
 		
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
 		Reports = page.locator("//li[@class = 'rmItem rmFirst']/a[contains(text(),'Reports')]");

@@ -11,6 +11,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
+import base.basetest;
 import utils.DropdownUtils;
 
 import java.util.logging.Logger;
@@ -41,7 +42,7 @@ public class ProfileApprovalHistoryPage {
 	
 	public ProfileApprovalHistoryPage(Page page) {
 		
-		this.page = page;
+		this.page = basetest.getPage();
 	
 		
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
