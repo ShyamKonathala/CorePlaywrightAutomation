@@ -9,52 +9,61 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentReportListener implements ITestListener {
-	
-	 private static ExtentReports extent;
-	    private static ExtentTest test;
+public class ExtentReportListener  implements ITestListener {
 
-	    public void onStart(ITestContext context) {
-	        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+	private static ExtentReports extent;
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
-	        // Timestamped report
-	        String reportName = "ExtentReport_" + timestamp + ".html";
-	        String reportPath = System.getProperty("user.dir") + "/test-output/" + reportName;
+    @Override
+    public void onStart(ITestContext context) {
+        // Create timestamp for unique report name
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport_" + timestamp + ".html";
 
-	        // Fixed report name for Jenkins
-	        String fixedReportPath = System.getProperty("user.dir") + "/test-output/ExtentReport.html";
+        ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
+        spark.config().setDocumentTitle("Automation Test Report");
+        spark.config().setReportName("Playwright + TestNG Suite");
+        spark.config().setTheme(Theme.STANDARD);
 
-	        ExtentSparkReporter sparkTimestamped = new ExtentSparkReporter(reportPath);
-	        ExtentSparkReporter sparkFixed = new ExtentSparkReporter(fixedReportPath);
+        extent = new ExtentReports();
+        extent.attachReporter(spark);
+        extent.setSystemInfo("Framework", "Playwright + TestNG");
+        extent.setSystemInfo("Executed By", System.getProperty("user.name"));
+        extent.setSystemInfo("Execution Time", new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()));
+    }
 
-	        extent = new ExtentReports();
-	        extent.attachReporter(sparkTimestamped, sparkFixed);
+    @Override
+    public void onFinish(ITestContext context) {
+        extent.flush(); // Writes report
+    }
 
-	        extent.setSystemInfo("Environment", "QA");
-	        extent.setSystemInfo("User", System.getProperty("user.name"));
-	    }
+    @Override
+    public void onTestStart(ITestResult result) {
+        ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
+        test.set(extentTest);
+    }
 
-	    public void onTestStart(ITestResult result) {
-	        test = extent.createTest(result.getMethod().getMethodName());
-	    }
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        test.get().log(Status.PASS, "✅ Test Passed");
+    }
 
-	    public void onTestSuccess(ITestResult result) {
-	        test.pass("Test passed");
-	    }
+    @Override
+    public void onTestFailure(ITestResult result) {
+        test.get().log(Status.FAIL, "❌ Test Failed: " + result.getThrowable());
 
-	    public void onTestFailure(ITestResult result) {
-	        test.fail(result.getThrowable());
-	    }
+        // 🔽 Screenshot capture placeholder (Playwright)
+        // String screenshotPath = "screenshots/" + result.getMethod().getMethodName() + ".png";
+        // test.get().addScreenCaptureFromPath(screenshotPath);
+    }
 
-	    public void onTestSkipped(ITestResult result) {
-	        test.skip(result.getThrowable());
-	    }
-
-	    public void onFinish(ITestContext context) {
-	        extent.flush();
-	    }
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        test.get().log(Status.SKIP, "⚠️ Test Skipped: " + result.getThrowable());
+    }
 }
