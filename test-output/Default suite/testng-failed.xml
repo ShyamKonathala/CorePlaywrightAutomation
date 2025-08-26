@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CoreTests.LoginTest">
+      <class name="CoreTests.PInvoicetest">
         <methods>
+          <include name="Pinvtst"/>
           <include name="setup"/>
-          <include name="Login"/>
+          <include name="teardown"/>
+          <include name="gensrch"/>
         </methods>
-      </class> <!-- CoreTests.LoginTest -->
+      </class> <!-- CoreTests.PInvoicetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

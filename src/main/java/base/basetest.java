@@ -5,7 +5,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import com.microsoft.playwright.Browser;
@@ -56,7 +58,7 @@ public class basetest {
 	    }
 
 	    // ---- SETUP ----
-	    @BeforeMethod(alwaysRun = true)
+	    @BeforeClass(alwaysRun = true)
 	    public void setup() {
 	        Playwright playwright = Playwright.create();
 	        tlPlaywright.set(playwright);
@@ -81,7 +83,7 @@ public class basetest {
 	    }
 
 	    // ---- TEARDOWN ----
-	    @AfterMethod(alwaysRun = true)
+	    @AfterClass(alwaysRun = true)
 	    public void teardown() {
 	        if (getContext() != null) getContext().close();
 	        if (getBrowser() != null) getBrowser().close();

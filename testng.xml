@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel = "classes" thread-count="6" >
+<suite name="Suite" parallel = "classes" thread-count="8" >
 
 <test name="Test">
     <classes>
@@ -10,6 +10,8 @@
       <class name="CoreTests.TanksTest"/>
       <class name="CoreTests.LoginTest"/>
       <class name="CoreTests.ProfileTonnageTest"/>
+      <class name="CoreTests.InvoiceTest"/>
+       <class name="CoreTests.PInvoicetest"/>
     </classes>
     </test> <!-- Test -->
    
