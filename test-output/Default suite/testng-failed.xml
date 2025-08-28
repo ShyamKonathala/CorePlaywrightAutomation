@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CoreTests.PInvoicetest">
+      <class name="CoreTests.ReceivingLogsTest">
         <methods>
-          <include name="Pinvtst"/>
+          <include name="rlogs" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="gensrch"/>
         </methods>
-      </class> <!-- CoreTests.PInvoicetest -->
+      </class> <!-- CoreTests.ReceivingLogsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
