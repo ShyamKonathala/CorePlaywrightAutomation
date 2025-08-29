@@ -10,7 +10,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class InvoiceTest extends basetest {
-@Test(dataProvider = "Invoice",dataProviderClass = ExcelDataProvider.class)
+@Test(dataProvider = "Invoice",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void invce(String user, String pass,String customer,String generator) {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

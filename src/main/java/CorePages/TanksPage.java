@@ -42,7 +42,7 @@ public class TanksPage {
 	//String JobId = "87056";
 	
 	public TanksPage(Page page) {
-		this.page = basetest.getPage();
+		this.page = page;
 		this.mainPage = page; 
 		
 		PP = page.locator("//span[contains(text(),'Plant Processing')]");

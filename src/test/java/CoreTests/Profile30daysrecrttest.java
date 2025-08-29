@@ -12,7 +12,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class Profile30daysrecrttest extends basetest {
-	@Test(dataProvider = "login",dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "login",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void recert(String user,String pass) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

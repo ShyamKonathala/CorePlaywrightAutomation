@@ -12,7 +12,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class ProfilebyGeneratorTest extends basetest {
-@Test(dataProvider = "GeneratorReport",dataProviderClass = ExcelDataProvider.class)
+@Test(dataProvider = "GeneratorReport",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void gener(String user,String pass, String generator) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

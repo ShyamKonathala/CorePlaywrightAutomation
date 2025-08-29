@@ -27,7 +27,7 @@ public class PInvoicePage {
 	private Locator genrte;
 	
 	public PInvoicePage(Page page) {
-this.page = basetest.getPage();
+		this.page = page;
 		
 		CP = page.locator("//ul[@class = 'rmRootGroup rmHorizontal']//span[contains(text(),'Customer Processing')]");
 		Pinvoice = page.locator("//ul[@class = 'rmVertical rmGroup rmLevel1']//li/a[contains(text(),'Package Invoices')]");

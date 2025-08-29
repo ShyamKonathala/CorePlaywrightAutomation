@@ -10,7 +10,7 @@ import base.basetest;
 import utils.ExcelDataProvider;
 
 public class WorkorderTest extends basetest {
-	@Test(dataProvider = "loginData2", dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "loginData2", dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void workorder(String user,String pass,String customer,String generator,String Srep, String InSrep, String CSRtext,String facility,String type, String UNT) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

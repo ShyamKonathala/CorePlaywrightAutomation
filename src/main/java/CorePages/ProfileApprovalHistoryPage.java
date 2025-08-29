@@ -42,8 +42,7 @@ public class ProfileApprovalHistoryPage {
 	
 	public ProfileApprovalHistoryPage(Page page) {
 		
-		this.page = basetest.getPage();
-	
+		this.page = page;
 		
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
 		 Reports = page.locator("//li[@class = 'rmItem rmFirst']/a[contains(text(),'Reports')]");
@@ -59,26 +58,33 @@ public class ProfileApprovalHistoryPage {
 	
 public void Approval() throws InterruptedException {
 	Reporting.hover();
+	page.waitForTimeout(5000);
 	
 	Reports.click();
+	page.waitForTimeout(5000);
 	apprttle.click();
+	page.waitForTimeout(5000);
 	
 	}
 
 public void start(String startdate) {
 	
 	startDate.fill(startdate);
+	page.waitForTimeout(5000);
 }
 
 public void end(String enddate) {
 	endDate.fill(enddate);
+	page.waitForTimeout(5000);
 }
 public void srch() {
 	searchButton.click();
+	page.waitForTimeout(5000);
 }
 public void expexcel() {
 	  Download download = page.waitForDownload(() -> {
-	        page.click(Excel);  // Trigger the download
+	        page.click(Excel);  
+	        page.waitForTimeout(5000);// Trigger the download
 	        try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
@@ -92,10 +98,13 @@ public void expexcel() {
 }
 
 public void btn() {
+	page.waitForTimeout(5000);
 	thirdbtn.click();
 	logger.info("Third button clicked");
+	page.waitForTimeout(5000);
 	ffthbtn.click();
 	logger.info("Fifth button clicked");
+	page.waitForTimeout(5000);
 	frstbtn.click();
 	logger.info("First button clicked");
 }

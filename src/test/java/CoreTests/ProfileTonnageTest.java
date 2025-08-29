@@ -11,7 +11,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class ProfileTonnageTest extends basetest{
-	@Test(dataProvider = "TonnageReport", dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "TonnageReport", dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void ton(String user,String pass,String customer,String generator) {
 		
 		LoginPage lo = new LoginPage(getPage());

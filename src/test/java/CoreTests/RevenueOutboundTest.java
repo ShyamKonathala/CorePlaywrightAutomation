@@ -12,7 +12,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class RevenueOutboundTest extends basetest {
-@Test(dataProvider = "login",dataProviderClass = ExcelDataProvider.class)
+@Test(dataProvider = "login",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void revneotbnd(String user, String pass) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

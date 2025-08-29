@@ -29,7 +29,7 @@ private static final Logger logger = Logger.getLogger(ProfilePricingPage.class.g
 	private Locator previous;
 	
 	public ProfilePricingPage(Page page) {
-this.page = basetest.getPage();
+		this.page = page;
 		
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
 		 Reports = page.locator("//li[@class = 'rmItem rmFirst']/a[contains(text(),'Reports')]");

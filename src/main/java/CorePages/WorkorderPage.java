@@ -62,7 +62,7 @@ public class WorkorderPage {
 	
 	
 	public WorkorderPage(Page page) {
-		this.page = basetest.getPage();
+		this.page = page;
 		this.context = page.context();
 		
 		CP = page.locator("//ul[@class = 'rmRootGroup rmHorizontal']//span[contains(text(),'Customer Processing')]");

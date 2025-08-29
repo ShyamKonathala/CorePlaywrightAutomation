@@ -26,7 +26,7 @@ private static final Logger logger = Logger.getLogger(ProfilesbyGeneratorPage.cl
 	private Locator previous;
 	
 	public ProfilesbyGeneratorPage(Page page) {
-this.page = basetest.getPage();
+		this.page = page;
 
 excel = page.locator("//a[contains(@id,'lbExport')]");
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
@@ -58,6 +58,7 @@ excel = page.locator("//a[contains(@id,'lbExport')]");
 	    logger.info("Excel Downloaded to: " + downloadedFile.toString());
 	}
 	public void buttons() {
+		page.waitForTimeout(10000);
 		next.click();
 		logger.info("Next Button Clicked");
 		page.waitForTimeout(5000);

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CoreTests.ReceivingLogsTest">
+      <class name="CoreTests.ProfilesbyCustomerTest">
         <methods>
-          <include name="rlogs" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="customr" invocation-numbers="0"/>
         </methods>
-      </class> <!-- CoreTests.ReceivingLogsTest -->
+      </class> <!-- CoreTests.ProfilesbyCustomerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

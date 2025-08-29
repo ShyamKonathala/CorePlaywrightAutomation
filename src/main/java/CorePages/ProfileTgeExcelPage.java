@@ -30,7 +30,7 @@ private static final Logger logger = Logger.getLogger(PInvoicePage.class.getName
 	
 	
 	public ProfileTgeExcelPage(Page page) {
-		this.page = basetest.getPage();
+		this.page = page;
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
 		 Reports = page.locator("//li[@class = 'rmItem rmFirst']/a[contains(text(),'Reports')]");
 		 ttle = page.locator("//a[@title = 'Profile Tonnage Report (Excel Export)']");
@@ -62,17 +62,21 @@ public void enddte(String end) {
 public void search() {
 	srchbtn.click();
 	logger.info("Search button clicked");
+	page.waitForTimeout(10000);
 }
 public void expexl() throws IOException {
 	Path downloadedFile = FileUtils.downloadFile(page, () -> excelbtn.click());
     logger.info("Excel Downloaded to: " + downloadedFile.toString());
+    page.waitForTimeout(10000);
 }
 
 public void button() {
 	frstbtn.click();
 	logger.info("First button clicked");
+	page.waitForTimeout(10000);
 	scndbtn.click();
 	logger.info("Second button clicked");
+	page.waitForTimeout(10000);
 	thrdbtn.click();
 	logger.info("Third button clicked");
 }

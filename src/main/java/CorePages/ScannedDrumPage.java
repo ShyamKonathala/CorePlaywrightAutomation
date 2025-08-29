@@ -26,7 +26,7 @@ private static final Logger logger = Logger.getLogger(ScannedDrumPage.class.getN
 	private Locator previous;
 	
 	public ScannedDrumPage(Page page) {
-		this.page = basetest.getPage();
+		this.page = page;
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
 		 Reports = page.locator("//li[@class = 'rmItem rmFirst']/a[contains(text(),'Reports')]");
 		 scnttle = page.locator("//a[@title = 'Scanned Drum Discrepancy']");

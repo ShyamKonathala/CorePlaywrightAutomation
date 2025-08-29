@@ -58,7 +58,7 @@ public class basetest {
 	    }
 
 	    // ---- SETUP ----
-	    @BeforeClass(alwaysRun = true)
+	    @BeforeMethod(alwaysRun = true)
 	    public void setup() {
 	        Playwright playwright = Playwright.create();
 	        tlPlaywright.set(playwright);
@@ -83,7 +83,7 @@ public class basetest {
 	    }
 
 	    // ---- TEARDOWN ----
-	    @AfterClass(alwaysRun = true)
+	    @AfterMethod(alwaysRun = true)
 	    public void teardown() {
 	        if (getContext() != null) getContext().close();
 	        if (getBrowser() != null) getBrowser().close();

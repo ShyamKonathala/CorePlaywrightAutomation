@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel = "classes" thread-count="3" configfailurepolicy="continue" >
+  <test name="Test" preserve-order="true" parallel="classes" thread-count="3">
+    <classes>
+      <class name="CoreTests.ReceivingLogsTest"/>
+      <class name="CoreTests.Profile30daysrecrttest"/>
+      <class name="CoreTests.ProfilebyGeneratorTest"/>
+      <class name="CoreTests.ProfileApprovalReport"/>
+      <class name="CoreTests.ProfileRecertTest"/>
+      <class name="CoreTests.ProfileTgeExcelTest"/>
+      <class name="CoreTests.ProfilesbyCustomerTest"/>
+     <class name="CoreTests.ScannedDrumTest"/>
+      <class name="CoreTests.ProfileConstituentTest"/>
+      <class name="CoreTests.ProfilePricingTest"/>
+      <class name="CoreTests.WorkorderTest"/>
+      <class name="CoreTests.TanksTest"/>
+      <class name="CoreTests.LoginTest"/>
+     <class name="CoreTests.InvoiceTest"/>
+    <class name="CoreTests.RevenueOutboundTest"/>
+     <class name="CoreTests.PInvoicetest"/>
+      <class name="CoreTests.ProfileTonnageTest"/>
+      </classes>
+  </test> <!-- Test -->
+  
+   <listeners>
+    <listener class-name="utils.ExtentReportListener"/>
+</listeners>
+</suite> <!-- Suite -->

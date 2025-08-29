@@ -21,7 +21,7 @@ public class ProfilesConstituentPage {
 	private Locator gobtn;
 	
 	public ProfilesConstituentPage(Page page) {
-this.page = basetest.getPage();
+		this.page = page;
 	
 Reporting = page.locator("//span[contains(text(),'Reporting')]");
  Reports = page.locator("//li[@class = 'rmItem rmFirst']/a[contains(text(),'Reports')]");

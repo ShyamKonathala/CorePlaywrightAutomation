@@ -26,8 +26,7 @@ private static final Logger logger = Logger.getLogger(Profilebycustomerpage.clas
 	private Locator previous;
 	
 	public Profilebycustomerpage(Page page) {
-		this.page = basetest.getPage();
-		
+		this.page = page;
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
 		 Reports = page.locator("//li[@class = 'rmItem rmFirst']/a[contains(text(),'Reports')]");
 		 cstttle = page.locator("//a[@title = 'Profiles By Customer Report']");
@@ -49,14 +48,16 @@ private static final Logger logger = Logger.getLogger(Profilebycustomerpage.clas
 		page.keyboard().press("ArrowDown");
 		page.waitForTimeout(5000);
 		page.keyboard().press("Enter");
-		page.waitForTimeout(10000);
+		page.waitForTimeout(5000);
 		
 		}
 public void expexl() throws IOException {
 	Path downloadedFile = FileUtils.downloadFile(page, () -> excel.click());
     logger.info("Excel Downloaded to: " + downloadedFile.toString());
+    page.waitForTimeout(5000);
 }
 public void buttons() {
+	
 	next.click();
 	logger.info("Next Button Clicked");
 	page.waitForTimeout(5000);

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 28 20:17:42 IST 2025</td>
+<td>Started on:</td><td>Fri Aug 29 15:26:51 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>119 seconds (119366 ms)</td>
+<tr><td>Total time:</td><td>71 seconds (71697 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,10 +76,433 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='CoreTests.ScannedDrumTest.scdrum()'><b>scdrum</b><br>Test class: CoreTests.ScannedDrumTest<br>Parameters: coreuser, Harsco123!, 6/1/25</td>
-<td></td>
-<td>103</td>
-<td>CoreTests.ScannedDrumTest@e7edb54</td></tr>
+<td title='CoreTests.ProfilesbyCustomerTest.setup()'><b>setup</b><br>Test class: CoreTests.ProfilesbyCustomerTest</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;net::ERR_ABORTED; maybe frame was detached?
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
+    at FrameManager.frameAbortedNavigation (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\frames.js:204:14)
+    at FrameManager.requestFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\frames.js:254:12)
+    at CRNetworkManager._onLoadingFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crNetworkManager.js:461:55)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crConnection.js:138:14
+}
+Call log:
+-   - navigating to &quot;https://coreuat.cleanearthinc.com/Login.aspx&quot;, waiting until &quot;load&quot;
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:419)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:918)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5491)
+	at base.basetest.setup(basetest.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;net::ERR_ABORTED; maybe frame was detached?
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
+    at FrameManager.frameAbortedNavigation (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\frames.js:204:14)
+    at FrameManager.requestFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\frames.js:254:12)
+    at CRNetworkManager._onLoadingFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crNetworkManager.js:461:55)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crConnection.js:138:14
+}
+Call log:
+-   - navigating to &quot;https://coreuat.cleanearthinc.com/Login.aspx&quot;, waiting until &quot;load&quot;
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 39 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace593573025", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace593573025'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;net::ERR_ABORTED; maybe frame was detached?
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
+    at FrameManager.frameAbortedNavigation (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\frames.js:204:14)
+    at FrameManager.requestFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\frames.js:254:12)
+    at CRNetworkManager._onLoadingFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crNetworkManager.js:461:55)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crConnection.js:138:14
+}
+Call log:
+-   - navigating to &quot;https://coreuat.cleanearthinc.com/Login.aspx&quot;, waiting until &quot;load&quot;
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:419)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:918)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5491)
+	at base.basetest.setup(basetest.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;net::ERR_ABORTED; maybe frame was detached?
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
+    at FrameManager.frameAbortedNavigation (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\frames.js:204:14)
+    at FrameManager.requestFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\frames.js:254:12)
+    at CRNetworkManager._onLoadingFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crNetworkManager.js:461:55)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crConnection.js:138:14
+}
+Call log:
+-   - navigating to &quot;https://coreuat.cleanearthinc.com/Login.aspx&quot;, waiting until &quot;load&quot;
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 39 more
+</pre></div></td>
+<td>2</td>
+<td>CoreTests.ProfilesbyCustomerTest@50029372</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='CoreTests.ProfilesbyCustomerTest.customr()'><b>customr</b><br>Test class: CoreTests.ProfilesbyCustomerTest<br>Parameters: coreuser, Harsco123!, 20824</td>
+<td><div><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\dispatcher.js:256:69)
+    at transport.onmessage (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\cli\driver.js:53:59)
+    at Immediate._onImmediate (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\utils\pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:680)
+	at com.microsoft.playwright.Page.click(Page.java:3931)
+	at CorePages.LoginPage.login(LoginPage.java:35)
+	at CoreTests.ProfilesbyCustomerTest.customr(ProfilesbyCustomerTest.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\dispatcher.js:256:69)
+    at transport.onmessage (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\cli\driver.js:53:59)
+    at Immediate._onImmediate (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\utils\pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 35 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace131301148", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace131301148'><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\dispatcher.js:256:69)
+    at transport.onmessage (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\cli\driver.js:53:59)
+    at Immediate._onImmediate (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\utils\pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:680)
+	at com.microsoft.playwright.Page.click(Page.java:3931)
+	at CorePages.LoginPage.login(LoginPage.java:35)
+	at CoreTests.ProfilesbyCustomerTest.customr(ProfilesbyCustomerTest.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\dispatcher.js:256:69)
+    at transport.onmessage (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\cli\driver.js:53:59)
+    at Immediate._onImmediate (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\utils\pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>CoreTests.ProfilesbyCustomerTest@50029372</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='CoreTests.ProfilesbyCustomerTest.customr()'><b>customr</b><br>Test class: CoreTests.ProfilesbyCustomerTest<br>Parameters: coreuser, Harsco123!, 20824</td>
+<td><div><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\dispatcher.js:105:30)
+    at Page.&lt;anonymous&gt; (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\page.js:172:10)
+    at CRPage.didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crConnection.js:138:14
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.waitForTimeout(FrameImpl.java:997)
+	at com.microsoft.playwright.impl.PageImpl.waitForTimeout(PageImpl.java:1532)
+	at CorePages.Profilebycustomerpage.expexl(Profilebycustomerpage.java:57)
+	at CoreTests.ProfilesbyCustomerTest.customr(ProfilesbyCustomerTest.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\dispatcher.js:105:30)
+    at Page.&lt;anonymous&gt; (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\page.js:172:10)
+    at CRPage.didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crConnection.js:138:14
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 34 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace508873523", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace508873523'><pre>com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\dispatcher.js:105:30)
+    at Page.&lt;anonymous&gt; (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\page.js:172:10)
+    at CRPage.didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crConnection.js:138:14
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.waitForTimeout(FrameImpl.java:997)
+	at com.microsoft.playwright.impl.PageImpl.waitForTimeout(PageImpl.java:1532)
+	at CorePages.Profilebycustomerpage.expexl(Profilebycustomerpage.java:57)
+	at CoreTests.ProfilesbyCustomerTest.customr(ProfilesbyCustomerTest.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\dispatcher.js:105:30)
+    at Page.&lt;anonymous&gt; (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\dispatchers\pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\page.js:172:10)
+    at CRPage.didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-3065625841953810150\package\lib\server\chromium\crConnection.js:138:14
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 34 more
+</pre></div></td>
+<td>57</td>
+<td>CoreTests.ProfilesbyCustomerTest@50029372</td></tr>
 </table><p>
 </body>
 </html>

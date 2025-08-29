@@ -8,7 +8,7 @@ import base.basetest;
 import utils.ExcelDataProvider;
 
 public class ProfileApprovalReport extends basetest {
-	@Test(dataProvider = "loginData",dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "loginData",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void ProfileApproval(String user,String pass,String startdate,String enddate) throws InterruptedException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

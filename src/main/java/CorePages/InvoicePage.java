@@ -24,7 +24,7 @@ public class InvoicePage {
 	private Locator Invoices;
 	
 	public InvoicePage(Page page) {
-		this.page = basetest.getPage();
+		this.page = page;
 		
 		CP = page.locator("//ul[@class = 'rmRootGroup rmHorizontal']//span[contains(text(),'Customer Processing')]");
 		

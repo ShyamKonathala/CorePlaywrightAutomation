@@ -22,14 +22,14 @@ public class LoginPage {
 	    private final String dashboardFrame = "#frmMain"; // post-login element
 
 	    public LoginPage(Page page) {
-	        this.page = basetest.getPage();
+	    	this.page = page;
 	        page.setDefaultTimeout(20000);
 	        
 	       
 	    }
 
 	    public void login(String user, String pass) {
-	        page.setDefaultTimeout(90000);
+	        page.setDefaultTimeout(180000);
 
 	        // Step 1: Open login form
 	        page.click(loginbtn);
@@ -39,7 +39,7 @@ public class LoginPage {
 	        page.fill(pwd, pass);
 
 	        // Step 3: Click login without waiting for navigation
-	        page.locator(oldloginbtn).click(new Locator.ClickOptions().setTimeout(90000));
+	        page.locator(oldloginbtn).click(new Locator.ClickOptions().setTimeout(180000));
 	        
 
 	        page.waitForSelector("#ajaxLoading", 

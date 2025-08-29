@@ -12,7 +12,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class ProfilesbyCustomerTest extends basetest {
-@Test(dataProvider = "CustomerReport",dataProviderClass = ExcelDataProvider.class)
+@Test(dataProvider = "CustomerReport",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void customr(String user, String pass, String customer) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

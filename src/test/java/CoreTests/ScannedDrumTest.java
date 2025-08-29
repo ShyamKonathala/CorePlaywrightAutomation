@@ -12,7 +12,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class ScannedDrumTest extends basetest {
-	@Test(dataProvider = "ScannedReport",dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "ScannedReport",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void scdrum(String user,String pass,String startDate) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

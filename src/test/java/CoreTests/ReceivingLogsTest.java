@@ -12,7 +12,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class ReceivingLogsTest extends basetest{
-@Test(dataProvider = "loginData",dataProviderClass = ExcelDataProvider.class)
+@Test(dataProvider = "loginData",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void rlogs(String user,String pass,String startDate,String endDate) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

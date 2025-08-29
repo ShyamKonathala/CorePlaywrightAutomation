@@ -19,7 +19,7 @@ public class PInvoicetest extends basetest {
     String type;
     
 
-    @Test(priority = 1, dataProvider = "PInvoice", dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 1, dataProvider = "PInvoice", dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
     public void Pinvtst(String user, String pass, String customer, String generator,String ids,String types) {
         lo = new LoginPage(getPage());
         pp = new PInvoicePage(getPage());

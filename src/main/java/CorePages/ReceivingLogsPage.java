@@ -27,7 +27,7 @@ private static final Logger logger = Logger.getLogger(ReceivingLogsPage.class.ge
 	private Locator previous;
 	
 	public ReceivingLogsPage(Page page) {
-		this.page = basetest.getPage();
+		this.page = page;
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");
 		 Reports = page.locator("//li[@class = 'rmItem rmFirst']/a[contains(text(),'Reports')]");
 		 lgsttle = page.locator("//a[@title = 'Receiving Logs Missing Data']");

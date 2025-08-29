@@ -23,7 +23,7 @@ private static final Logger logger = Logger.getLogger(ProfileRecert30DaysPage.cl
 	private Locator excel;
 	
 	public ProfileRecert30DaysPage(Page page) {
-this.page = basetest.getPage();
+this.page = page;
 
 excel = page.locator("//a[contains(@id,'lbExport')]");
 		Reporting = page.locator("//span[contains(text(),'Reporting')]");

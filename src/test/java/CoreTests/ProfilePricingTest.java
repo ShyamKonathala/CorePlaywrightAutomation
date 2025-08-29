@@ -12,7 +12,7 @@ import utils.ExcelDataProvider;
 import utils.PageLocators;
 
 public class ProfilePricingTest extends basetest {
-	@Test(dataProvider = "PricingReport",dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "PricingReport",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void prflepr(String user, String pass,String customer,String generator,String svalue) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

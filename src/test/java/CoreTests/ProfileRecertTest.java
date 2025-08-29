@@ -12,7 +12,7 @@ import utils.DropdownUtils;
 import utils.ExcelDataProvider;
 
 public class ProfileRecertTest extends basetest {
-@Test(dataProvider = "RecertReport", dataProviderClass = ExcelDataProvider.class)
+@Test(dataProvider = "RecertReport", dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void recrt(String user, String pass, String salesrep,String customer) throws IOException {
 		
 		LoginPage lo = new LoginPage(getPage());

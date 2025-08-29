@@ -10,7 +10,7 @@ import base.basetest;
 import utils.ExcelDataProvider;
 
 public class TanksTest extends basetest {
-	@Test(dataProvider = "Tanks",dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "Tanks",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void tanktest(String user, String pass,String tankNumber,String ManifestId,String record,String JobId) throws IOException {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

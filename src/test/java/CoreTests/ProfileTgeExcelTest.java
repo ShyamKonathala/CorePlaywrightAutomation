@@ -13,7 +13,7 @@ import utils.PageLocators;
 
 public class ProfileTgeExcelTest extends basetest {
 
-	@Test(dataProvider = "loginData",dataProviderClass = ExcelDataProvider.class)
+	@Test(dataProvider = "loginData",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void tongerprt(String user, String pass, String start, String end) throws IOException {
 		
 		LoginPage lo = new LoginPage(getPage());

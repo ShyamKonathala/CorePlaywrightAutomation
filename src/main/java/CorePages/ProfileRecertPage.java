@@ -49,8 +49,7 @@ public class ProfileRecertPage {
 		search = page.locator("//input[@id = 'btnSearch']");
 		expexl = page.locator("//button[@id = 'btnExportToExcel']");
 		
-		
-		this.page = basetest.getPage();
+		this.page = page;
 	}
 	
 	public void recert() {
