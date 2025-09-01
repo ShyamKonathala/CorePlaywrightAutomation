@@ -33,6 +33,7 @@ public class ProfileApprovalHistoryPage {
 	private Locator ffthbtn;
 	private Locator frstbtn;
 	
+	
 	 private String Excel = "#ctl00_MainContent_RadGrid1_ctl00_ctl02_ctl00_lbExport";
 	 
 	
@@ -53,6 +54,7 @@ public class ProfileApprovalHistoryPage {
 		 thirdbtn = page.locator("//div[@class = 'rgWrap rgNumPart']/a[3]");
 		 ffthbtn = page.locator("//div[@class = 'rgWrap rgNumPart']/a[5]");
 		 frstbtn = page.locator("//div[@class = 'rgWrap rgNumPart']/a[1]");
+		 
 		
 	}
 	

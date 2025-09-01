@@ -23,4 +23,10 @@ public class PageLocators {
 	public static final String slsrp_Arrow = "//input[contains(@id,'rcbSalesRep')]/following-sibling::button[contains(@class,'rcbActionButton')]";
 	public static final String slsrp_size = "//div[contains(@id,'rcbSalesRep_DropDown')]/div/ul/li[contains(text(),'%s')]";
 	
+	public static final String plant_Arrow = "#ctl00_MainContent_PlantId button.rcbActionButton";
+	public static final String plant_size = "//div[@id = 'ctl00_MainContent_PlantId_DropDown']/div/ul/li[contains(text(),'%s')]";
+	
+	public static final String user_Arrow = "//span[@class = 'ag-icon ag-icon-small-down']";
+	public static final String user_size = "//span[@class = 'ag-icon ag-icon-small-down']";
+	
 }

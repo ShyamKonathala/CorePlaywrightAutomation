@@ -8,9 +8,7 @@
       <class name="CoreTests.TanksTest"/>
       <class name="CoreTests.LoginTest"/>
      <class name="CoreTests.InvoiceTest"/>
-    <class name="CoreTests.RevenueOutboundTest"/>
-     <class name="CoreTests.PInvoicetest"/>
-      <class name="CoreTests.ProfileTonnageTest"/>
+   <class name="CoreTests.PInvoicetest"/>
     </classes>
     </test> <!-- Test -->
    

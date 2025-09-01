@@ -13,13 +13,19 @@
      <class name="CoreTests.ScannedDrumTest"/>
       <class name="CoreTests.ProfileConstituentTest"/>
       <class name="CoreTests.ProfilePricingTest"/>
-      <class name="CoreTests.WorkorderTest"/>
-      <class name="CoreTests.TanksTest"/>
-      <class name="CoreTests.LoginTest"/>
-     <class name="CoreTests.InvoiceTest"/>
-    <class name="CoreTests.RevenueOutboundTest"/>
-     <class name="CoreTests.PInvoicetest"/>
       <class name="CoreTests.ProfileTonnageTest"/>
+    <class name="CoreTests.RevenueOutboundTest"/>
+       <class name="CoreTests.SolidWastetest"/>
+        <class name="CoreTests.SolidWasteInboundTest"/>
+          <class name="CoreTests.SuspectContainersTest"/>
+          <class name="CoreTests.TrackingReportTest"/>
+           <class name="CoreTests.TrackingAlternatetest"/>
+            <class name="CoreTests.UnbilledReportTest"/>
+             <class name="CoreTests.UniversalWasteTest"/>
+             <class name="CoreTests.UserReportTest"/>
+             <class name="CoreTests.WorkordersnotinvoicedTest"/>
+             <class name="CoreTests.WorkordersonHoldTest"/>
+             
       </classes>
   </test> <!-- Test -->
   

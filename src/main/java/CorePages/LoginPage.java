@@ -29,7 +29,7 @@ public class LoginPage {
 	    }
 
 	    public void login(String user, String pass) {
-	        page.setDefaultTimeout(180000);
+	        page.setDefaultTimeout(30000);
 
 	        // Step 1: Open login form
 	        page.click(loginbtn);
@@ -39,7 +39,7 @@ public class LoginPage {
 	        page.fill(pwd, pass);
 
 	        // Step 3: Click login without waiting for navigation
-	        page.locator(oldloginbtn).click(new Locator.ClickOptions().setTimeout(180000));
+	        page.locator(oldloginbtn).click(new Locator.ClickOptions().setTimeout(60000));
 	        
 
 	        page.waitForSelector("#ajaxLoading", 
@@ -51,7 +51,7 @@ public class LoginPage {
 
 	            // 3. Optionally wait until "Profiles Assigned to Me" table appears
 	            page.waitForSelector("text=Profiles Assigned to Me", 
-	                new Page.WaitForSelectorOptions().setTimeout(90000));
+	                new Page.WaitForSelectorOptions().setTimeout(60000));
 
 	        // Step 5: Assert page title (post-login verification)
 	        String title = page.title();

@@ -20,7 +20,41 @@ public class ExcelDataProvider {
 		return data;
 		
 	}
+	@DataProvider(name = "TrackingReport")
+	public static Object[][] getData15() throws IOException{
+		String filepath = ConfigReader.get("excelFilePath");
+		
+		Object[][] data = new Object[1][5];
+		
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
+		data[0][2] = ExcelUtils.getCellData(filepath, "Values", 8, 1); //Dropdown Values
+		
+		data[0][3] = ExcelUtils.getCellData(filepath, "Login", 21, 2);//Start Date
+		data[0][4] = ExcelUtils.getCellData(filepath, "Login", 1, 3);//End date
+		
+		
+		return data;
+		
+	}
 	
+	@DataProvider(name = "TrackingAlterNateReport")
+	public static Object[][] getData16() throws IOException{
+		String filepath = ConfigReader.get("excelFilePath");
+		
+		Object[][] data = new Object[1][6];
+		
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
+		data[0][2] = ExcelUtils.getCellData(filepath, "Customers", 2, 0); //Customers
+		data[0][3] = ExcelUtils.getCellData(filepath, "Generators", 1, 0); //Generators
+		data[0][4] = ExcelUtils.getCellData(filepath, "Login", 1, 2);//Start Date
+		data[0][5] = ExcelUtils.getCellData(filepath, "Login", 1, 3);//End date
+		
+		
+		return data;
+		
+	}
 	@DataProvider(name = "ScannedReport")
 	public static Object[][] getData13() throws IOException{
 		String filepath = ConfigReader.get("excelFilePath");
@@ -30,6 +64,25 @@ public class ExcelDataProvider {
 		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Login", 1, 2);
+		
+		
+		
+		return data;
+		
+	}
+	
+	@DataProvider(name = "SolidReport")
+	public static Object[][] getData14() throws IOException{
+		String filepath = ConfigReader.get("excelFilePath");
+		
+		Object[][] data = new Object[1][5];
+		
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
+		data[0][2] = ExcelUtils.getCellData(filepath, "Facilities", 7, 0); //Facilities
+		data[0][3] = ExcelUtils.getCellData(filepath, "Login", 1, 2);
+		data[0][4] = ExcelUtils.getCellData(filepath, "Login", 1, 3);
+		
 		
 		
 		
@@ -59,6 +112,24 @@ public class ExcelDataProvider {
 		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Customers", 3, 0);//Customers
+		
+		
+		return data;
+		
+	}
+	
+	@DataProvider(name = "Facilities")
+	public static Object[][] getData18() throws IOException{
+		String filepath = ConfigReader.get("excelFilePath");
+		
+		Object[][] data = new Object[1][5];
+		
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
+		data[0][2] = ExcelUtils.getCellData(filepath, "Facilities", 13, 0);//Facilities
+		data[0][3] = ExcelUtils.getCellData(filepath, "Login", 1, 2);//Start Date
+		data[0][4] = ExcelUtils.getCellData(filepath, "Login", 1, 3);//End Date
+		
 		
 		
 		return data;
