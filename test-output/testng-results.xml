@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-01T16:52:45 IST" name="Default suite" finished-at="2025-09-01T16:54:30 IST" duration-ms="104697">
+  <suite started-at="2025-09-01T18:44:13 IST" name="Default suite" finished-at="2025-09-01T18:46:05 IST" duration-ms="112159">
     <groups>
     </groups>
-    <test started-at="2025-09-01T16:52:45 IST" name="Default test" finished-at="2025-09-01T16:54:30 IST" duration-ms="104697">
-      <class name="CoreTests.WorkordersonHoldTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:CoreTests.WorkordersonHoldTest@50029372]" started-at="2025-09-01T16:52:46 IST" name="setup" finished-at="2025-09-01T16:53:00 IST" duration-ms="13744" status="PASS">
+    <test started-at="2025-09-01T18:44:13 IST" name="Default test" finished-at="2025-09-01T18:46:05 IST" duration-ms="112159">
+      <class name="CoreTests.ProfilesbyCustomerTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:CoreTests.ProfilesbyCustomerTest@50029372]" started-at="2025-09-01T18:44:14 IST" name="setup" finished-at="2025-09-01T18:44:24 IST" duration-ms="10238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="wrkord(java.lang.String,java.lang.String)[pri:0, instance:CoreTests.WorkordersonHoldTest@50029372]" started-at="2025-09-01T16:53:00 IST" name="wrkord" data-provider="login" finished-at="2025-09-01T16:54:30 IST" duration-ms="89949" status="PASS">
+        <test-method signature="customr(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:CoreTests.ProfilesbyCustomerTest@50029372]" started-at="2025-09-01T18:44:24 IST" name="customr" data-provider="CustomerReport" finished-at="2025-09-01T18:46:05 IST" duration-ms="100756" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,20 @@
                 <![CDATA[Harsco123!]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[20824]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wrkord -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:CoreTests.WorkordersonHoldTest@50029372]" started-at="2025-09-01T16:54:30 IST" name="teardown" finished-at="2025-09-01T16:54:30 IST" duration-ms="351" status="PASS">
+        </test-method> <!-- customr -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:CoreTests.ProfilesbyCustomerTest@50029372]" started-at="2025-09-01T18:46:05 IST" name="teardown" finished-at="2025-09-01T18:46:05 IST" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- CoreTests.WorkordersonHoldTest -->
+      </class> <!-- CoreTests.ProfilesbyCustomerTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

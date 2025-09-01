@@ -59,12 +59,14 @@ public class ProfileRecertPage {
 		logger.info("Reports clicked");
 		prrcrtttle.click();
 		logger.info("Title Clicked");
+		page.waitForTimeout(5000);
 		
 	}
 	
 	public void dropdown(String salesrep) {
 		DropdownUtils.selectDropdownValue(page, salesrep);
 		logger.info("SalesRep Selected");
+		page.waitForTimeout(5000);
 	}
 	
 	public void customer(String customer) {

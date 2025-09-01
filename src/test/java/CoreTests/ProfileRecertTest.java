@@ -23,9 +23,10 @@ public class ProfileRecertTest extends basetest {
 		prp.customer(customer);
 		DatePickerUtils.previousselectDate(getPage(), "//a[@id = 'ctl00_MainContent_rdpStartDate_popupButton']","//span[contains(@id,'StartDate_calendar_Title')]","//a[@id= 'ctl00_MainContent_rdpStartDate_calendar_NP']", "//div[contains(@id,'ctl00_MainContent_rdpStartDate_calendar')]//td[@title='Tuesday, July 01, 2025']/a","July 2025","10" );
 		
-		DatePickerUtils.currentselectDate(getPage(), "//a[contains(@id,'EndDate_popupButton')]", "//span[contains(@id,'EndDate_calendar_Title')]", "//a[@id = 'ctl00_MainContent_rdpEndDate_calendar_NN']//span[@class = 't-font-icon t-i-arrow-right']", "//div[contains(@id,'ctl00_MainContent_rdpEndDate_calendar')]//td[@title = 'Monday, September 01, 2025']/a", "September 2025", "8");
+		DatePickerUtils.currentselectDate(getPage(), "//a[contains(@id,'EndDate_popupButton')]", "//span[contains(@id,'EndDate_calendar_Title')]", "//a[@id = 'ctl00_MainContent_rdpEndDate_calendar_NN']//span[@class = 't-font-icon t-i-arrow-right']", "//div[contains(@id,'ctl00_MainContent_rdpEndDate_calendar')]//td[@title = 'Saturday, November 01, 2025']/a", "November 2025", "8");
 		
 		prp.srch();
+		getPage().waitForTimeout(5000);
 		
 	}
 	
