@@ -9,6 +9,7 @@
       <class name="CoreTests.LoginTest"/>
      <class name="CoreTests.InvoiceTest"/>
    <class name="CoreTests.PInvoicetest"/>
+    <class name="CoreTests.InboundsTest"/>
     </classes>
     </test> <!-- Test -->
    

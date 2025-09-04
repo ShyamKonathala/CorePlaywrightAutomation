@@ -308,7 +308,7 @@ public class ExcelDataProvider {
 		
 	}
 	
-	@DataProvider(name = "InboundsDB", parallel = true)
+	@DataProvider(name = "InboundsDB")
 	public static Object[][] getManifestData() throws Exception {
 	    String filepath = ConfigReader.get("excelFilePath");
 	    String userid = ExcelUtils.getCellData(filepath, "Login", 1, 0);
