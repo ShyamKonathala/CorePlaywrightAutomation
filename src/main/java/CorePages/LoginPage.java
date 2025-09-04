@@ -23,7 +23,7 @@ public class LoginPage {
 
 	    public LoginPage(Page page) {
 	    	this.page = page;
-	        page.setDefaultTimeout(20000);
+	        page.setDefaultTimeout(30000);
 	        
 	       
 	    }

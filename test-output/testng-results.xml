@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-01T18:44:13 IST" name="Default suite" finished-at="2025-09-01T18:46:05 IST" duration-ms="112159">
+  <suite started-at="2025-09-04T12:18:02 IST" name="Default suite" finished-at="2025-09-04T12:24:00 IST" duration-ms="358030">
     <groups>
     </groups>
-    <test started-at="2025-09-01T18:44:13 IST" name="Default test" finished-at="2025-09-01T18:46:05 IST" duration-ms="112159">
-      <class name="CoreTests.ProfilesbyCustomerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:CoreTests.ProfilesbyCustomerTest@50029372]" started-at="2025-09-01T18:44:14 IST" name="setup" finished-at="2025-09-01T18:44:24 IST" duration-ms="10238" status="PASS">
+    <test started-at="2025-09-04T12:18:02 IST" name="Default test" finished-at="2025-09-04T12:24:00 IST" duration-ms="358030">
+      <class name="CoreTests.InboundsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:CoreTests.InboundsTest@3e2055d6]" started-at="2025-09-04T12:18:06 IST" name="setup" finished-at="2025-09-04T12:18:19 IST" duration-ms="13539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="customr(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:CoreTests.ProfilesbyCustomerTest@50029372]" started-at="2025-09-01T18:44:24 IST" name="customr" data-provider="CustomerReport" finished-at="2025-09-01T18:46:05 IST" duration-ms="100756" status="PASS">
+        <test-method signature="inbnd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:CoreTests.InboundsTest@3e2055d6]" started-at="2025-09-04T12:18:19 IST" name="inbnd" data-provider="InboundsDB" finished-at="2025-09-04T12:24:00 IST" duration-ms="340912" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,18 +25,28 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[20824]]>
+                <![CDATA[200864761CLE]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2025-09-03]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2025-09-02]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- customr -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:CoreTests.ProfilesbyCustomerTest@50029372]" started-at="2025-09-01T18:46:05 IST" name="teardown" finished-at="2025-09-01T18:46:05 IST" duration-ms="360" status="PASS">
+        </test-method> <!-- inbnd -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:CoreTests.InboundsTest@3e2055d6]" started-at="2025-09-04T12:24:00 IST" name="teardown" finished-at="2025-09-04T12:24:00 IST" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- CoreTests.ProfilesbyCustomerTest -->
+      </class> <!-- CoreTests.InboundsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CoreTests.ScannedDrumTest">
+      <class name="CoreTests.InboundsTest">
         <methods>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="scdrum" invocation-numbers="0"/>
+          <include name="inbnd" invocation-numbers="0"/>
         </methods>
-      </class> <!-- CoreTests.ScannedDrumTest -->
+      </class> <!-- CoreTests.InboundsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

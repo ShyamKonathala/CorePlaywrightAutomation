@@ -2,6 +2,10 @@ package utils;
 
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.testng.annotations.DataProvider;
 public class ExcelDataProvider {
@@ -304,7 +308,37 @@ public class ExcelDataProvider {
 		
 	}
 	
-	
-	
-	
+	@DataProvider(name = "InboundsDB", parallel = true)
+	public static Object[][] getManifestData() throws Exception {
+	    String filepath = ConfigReader.get("excelFilePath");
+	    String userid = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+	    String pwd = ExcelUtils.getCellData(filepath, "Login", 1, 1);
+	    String gendte = ExcelUtils.getCellData(filepath, "Login", 95, 2);
+	    String trndate = ExcelUtils.getCellData(filepath, "Login", 94, 2);
+
+	    String query = "SELECT TOP 1 m.manifest_tracking_number FROM base_waste_manifest m INNER JOIN base_waste_manifest_detail d ON m.manifest_id = d.manifest_id WHERE m.received_date IS NULL AND m.vendor_id = '257' and allow_receive_ind = '1';";
+
+	    List<Object[]> dataList = new ArrayList<>();
+	    ResultSet rs = null;
+	    Statement stmt = null;
+
+	    try {
+	        stmt = DBUtils.getConnection().createStatement();
+	        rs = stmt.executeQuery(query);
+
+	        while (rs.next()) {
+	            dataList.add(new Object[] {
+	                userid,
+	                pwd,
+	                rs.getString("manifest_tracking_number"),
+	                gendte,trndate
+	            });
+	        }
+	    } finally {
+	        DBUtils.closeResources(rs, stmt);
+	        DBUtils.closeConnection();
+	    }
+
+	    return dataList.toArray(new Object[0][]);
+	}
 }

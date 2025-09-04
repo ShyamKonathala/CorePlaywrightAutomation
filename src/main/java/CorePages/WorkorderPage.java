@@ -161,13 +161,14 @@ public class WorkorderPage {
 		}}
 	
 	public void gen(String generator) {
+		page.waitForTimeout(10000);
 		genrtr.fill(generator);
-		page.waitForTimeout(5000);
+		page.waitForTimeout(10000);
 		page.keyboard().press("ArrowDown");
-		page.waitForTimeout(5000);
+		page.waitForTimeout(10000);
 		page.keyboard().press("Enter");
 		logger.info("Generator Selected");
-		page.waitForTimeout(5000);
+		page.waitForTimeout(10000);
 		
 	}
 	
@@ -239,6 +240,7 @@ public class WorkorderPage {
 		try {
 			
 				attempts++;
+				page.waitForTimeout(10000);
 				facarrw.click();
 				logger.info("facility arrow clicked");
 				page.click(value);
@@ -259,7 +261,7 @@ public class WorkorderPage {
 			logger.info("Facility Not found" + maxattempts);
 			throw new RuntimeException(facility);
 		}
-		page.waitForTimeout(5000);
+		page.waitForTimeout(10000);
 		tredit.click();
 		logger.info("Transporter Edited");
 		page.waitForTimeout(5000);

@@ -77,6 +77,7 @@ public class TanksPage {
 
 		            if (rowText.contains(tankNumber)) {
 		                // Click the checkbox inside this row
+		            	page.waitForTimeout(5000);
 		                row.locator(".ag-selection-checkbox").click();
 		                System.out.println("✅ Tank " + tankNumber + " selected");
 		                found = true;
@@ -109,6 +110,7 @@ public class TanksPage {
 			
 			String text = ro.innerText().trim();
 			if(text.equals(ManifestId)) {
+				page.waitForTimeout(5000);
 				ro.locator(".ag-selection-checkbox").click();
 				logger.info("Manifest Selected");
 				found2 = true;
@@ -125,8 +127,10 @@ public class TanksPage {
 		}
 	
 	public void save() {
+		page.waitForTimeout(5000);
 		Sve.click();
 		logger.info("Manifest Saved");
+		page.waitForTimeout(5000);
 		
 	}
 	public void sampleAndNewWindow(String record, String jobId) throws IOException {
@@ -143,7 +147,7 @@ public class TanksPage {
 	    logger.info("Record Added in first popup");
 
 	    // Wait for any processing in first popup
-	    firstPopup.waitForTimeout(2000);
+	    firstPopup.waitForTimeout(5000);
 
 	    // --- STEP 3: Open second popup from inside first popup ---
 	    Page secondPopup = firstPopup.waitForPopup(() -> {
@@ -156,6 +160,8 @@ public class TanksPage {
 
 	    // Optional: reload to ensure table is fresh
 	    secondPopup.reload();
+	    
+	    secondPopup.waitForTimeout(5000);
 
 	    // --- STEP 4: Download the report in second popup ---
 	    Locator downloadBtn = secondPopup.locator(
