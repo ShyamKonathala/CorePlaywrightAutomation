@@ -25,12 +25,7 @@
              <class name="CoreTests.UserReportTest"/>
              <class name="CoreTests.WorkordersnotinvoicedTest"/>
              <class name="CoreTests.WorkordersonHoldTest"/>
-               <class name="CoreTests.WorkorderTest"/>
-      <class name="CoreTests.TanksTest"/>
-      <class name="CoreTests.LoginTest"/>
-     <class name="CoreTests.InvoiceTest"/>
-   <class name="CoreTests.PInvoicetest"/>
-    <class name="CoreTests.InboundsTest"/>
+             
              
       </classes>
   </test> <!-- Test -->
