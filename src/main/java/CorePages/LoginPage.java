@@ -42,7 +42,7 @@ public class LoginPage {
 	        page.locator(oldloginbtn).click(new Locator.ClickOptions().setTimeout(60000));
 	        
 
-	        page.waitForSelector("#ajaxLoading", 
+	        /*page.waitForSelector("#ajaxLoading", 
 	                new Page.WaitForSelectorOptions().setState(WaitForSelectorState.HIDDEN));
 
 	            // 2. Wait until dashboard form is attached & visible
@@ -51,7 +51,7 @@ public class LoginPage {
 
 	            // 3. Optionally wait until "Profiles Assigned to Me" table appears
 	            page.waitForSelector("text=Profiles Assigned to Me", 
-	                new Page.WaitForSelectorOptions().setTimeout(60000));
+	                new Page.WaitForSelectorOptions().setTimeout(60000));*/
 
 	        // Step 5: Assert page title (post-login verification)
 	        String title = page.title();
