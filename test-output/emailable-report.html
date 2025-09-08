@@ -9,10 +9,77 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">142,273</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">727,582</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">CoreTests.ScannedDrumTest</td><td><a href="#m0">scdrum</a></td><td rowspan="1">1756977612665</td><td rowspan="1">124818</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">CoreTests.Outboundtest</td><td><a href="#m0">outbond</a></td><td rowspan="1">1757323944586</td><td rowspan="1">316198</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">CoreTests.Outboundtest</td><td><a href="#m1">outbond</a></td><td rowspan="1">1757324268115</td><td rowspan="1">385708</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">CoreTests.ScannedDrumTest#scdrum</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>coreuser</td><td>Harsco123!</td><td>6/1/25</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">CoreTests.Outboundtest#outbond</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>ZZ7700</td><td>Clean Earth of Calvert City</td><td>Ross Incineration Services, Inc.</td><td>DM</td><td>P</td></tr><tr><th colspan="7">Exception</th></tr><tr><td colspan="7"><div class="stacktrace">com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\dispatchers\dispatcher.js:105:30)
+    at Page.&lt;anonymous&gt; (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\dispatchers\pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\page.js:172:10)
+    at CRPage.didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\chromium\crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\chromium\crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\chromium\crConnection.js:138:14
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.waitForTimeout(FrameImpl.java:997)
+	at com.microsoft.playwright.impl.PageImpl.waitForTimeout(PageImpl.java:1532)
+	at CorePages.OutboundPage.prdtdata(OutboundPage.java:183)
+	at CoreTests.Outboundtest.outbond(Outboundtest.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\dispatchers\dispatcher.js:105:30)
+    at Page.&lt;anonymous&gt; (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\dispatchers\pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\page.js:172:10)
+    at CRPage.didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\chromium\crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\chromium\crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-16362596071776340107\package\lib\server\chromium\crConnection.js:138:14
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 34 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">CoreTests.Outboundtest#outbond</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>ZZ7700</td><td>Clean Earth of Calvert City</td><td>Ross Incineration Services, Inc.</td><td>DM</td><td>P</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

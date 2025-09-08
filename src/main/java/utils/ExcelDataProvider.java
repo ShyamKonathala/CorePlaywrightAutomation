@@ -308,6 +308,49 @@ public class ExcelDataProvider {
 		
 	}
 	
+	@DataProvider(name = "InterCompany")
+	public static Object[][] Inter() throws Exception {
+	    String filepath = ConfigReader.get("excelFilePath");
+	    String userid = ExcelUtils.getCellData(filepath, "Login", 5, 0);
+	    String pwd = ExcelUtils.getCellData(filepath, "Login", 1, 1);
+	    String customer = ExcelUtils.getCellData(filepath, "Customers", 6, 0);
+	    String type = ExcelUtils.getCellData(filepath, "Container",2,0);//Container Type
+	    String UNT = ExcelUtils.getCellData(filepath, "Container",1,1);//Unit
+
+	    String query1 = "select vendor_name from base_vendor where vendor_id = 1";
+	    String query2 = "select vendor_name from base_vendor where vendor_id = 14";
+
+	    List<Object[]> dataList = new ArrayList<>();
+	    ResultSet rs1 = null, rs2 = null;
+	    Statement stmt1 = null, stmt2 = null;
+
+	    try {
+	        stmt1 = DBUtils.getConnection().createStatement();
+	        rs1 = stmt1.executeQuery(query1);
+
+	        stmt2 = DBUtils.getConnection().createStatement();
+	        rs2 = stmt2.executeQuery(query2);
+
+	        String vendor1 = null, vendor2 = null;
+
+	        if (rs1.next()) {
+	            vendor1 = rs1.getString("vendor_name");
+	        }
+	        if (rs2.next()) {
+	            vendor2 = rs2.getString("vendor_name");
+	        }
+
+	        // Add test data
+	        dataList.add(new Object[] { userid, pwd, customer, vendor1, vendor2,type,UNT });
+
+	    } finally {
+	        DBUtils.closeResources(rs1, stmt1);
+	        DBUtils.closeResources(rs2, stmt2);
+	        DBUtils.closeConnection();
+	    }
+
+	    return dataList.toArray(new Object[0][]);
+	}
 	@DataProvider(name = "InboundsDB")
 	public static Object[][] getManifestData() throws Exception {
 	    String filepath = ConfigReader.get("excelFilePath");
