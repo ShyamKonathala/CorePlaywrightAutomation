@@ -39,10 +39,13 @@ private static final Logger logger = Logger.getLogger(RevenueOutboundPage.class.
 	}
 	
 	public void outbound() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reporting hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports Clicked");
+		page.waitForTimeout(5000);
 		rvnettle.click();
 		logger.info("Title Clicked");
 	}

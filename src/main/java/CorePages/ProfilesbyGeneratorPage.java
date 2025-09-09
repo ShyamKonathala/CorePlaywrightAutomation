@@ -38,10 +38,13 @@ excel = page.locator("//a[contains(@id,'lbExport')]");
 	}
 	
 	public void gen(String generator) {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reports Hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports Clicked");
+		page.waitForTimeout(5000);
 		genttle.click();
 		logger.info("Gen title clicked");
 		genrtr.fill(generator);

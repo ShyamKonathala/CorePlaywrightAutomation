@@ -44,10 +44,13 @@ private static final Logger logger = Logger.getLogger(ProfilePricingPage.class.g
 		 
 	}
 public void pricing() {
+	page.waitForTimeout(5000);
 	Reporting.hover();
 	logger.info("Reports Hovered");
+	page.waitForTimeout(5000);
 	Reports.click();
 	logger.info("Reports Clicked");
+	page.waitForTimeout(5000);
 	prcngttle.click();
 	logger.info("Pricing Title Clicked");
 	

@@ -53,10 +53,13 @@ public class ProfileRecertPage {
 	}
 	
 	public void recert() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reporting hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports clicked");
+		page.waitForTimeout(5000);
 		prrcrtttle.click();
 		logger.info("Title Clicked");
 		page.waitForTimeout(5000);

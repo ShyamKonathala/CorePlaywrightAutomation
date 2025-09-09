@@ -32,10 +32,13 @@ excel = page.locator("//a[contains(@id,'lbExport')]");
 	}
 	
 	public void recrt() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reports Hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports Clicked");
+		page.waitForTimeout(5000);
 		daysttle.click();
 		logger.info("Title Clicked");
 	}

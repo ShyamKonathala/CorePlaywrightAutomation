@@ -37,11 +37,14 @@ private static final Logger logger = Logger.getLogger(Profilebycustomerpage.clas
 	}
 	
 	public void cstmer(String customer) {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reports Hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports Clicked");
 		cstttle.click();
+		page.waitForTimeout(5000);
 		logger.info(" Customer Title Clicked");
 		cstmr.fill(customer);
 		page.waitForTimeout(5000);

@@ -44,10 +44,13 @@ private static final Logger logger = Logger.getLogger(PInvoicePage.class.getName
 	}
 	
 	public void excel() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reporting hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports clicked");
+		page.waitForTimeout(5000);
 		ttle.click();
 		logger.info("Title Clicked");
 		

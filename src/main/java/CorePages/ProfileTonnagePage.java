@@ -34,11 +34,13 @@ public class ProfileTonnagePage {
 	}
 	
 	public void Tonnage() {
-		
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reports hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports clicked");
+		page.waitForTimeout(5000);
 		Tonttle.click();
 		logger.info("Title clicked");
 		

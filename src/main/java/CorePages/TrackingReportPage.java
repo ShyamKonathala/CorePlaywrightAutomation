@@ -44,6 +44,7 @@ private static final Logger logger = Logger.getLogger(TrackingReportPage.class.g
 				rstbtn = page.locator("#MainContent_btnClear");
 	}
  public void trrprt() {
+	 page.waitForTimeout(5000);
 	 Reporting.hover();
 		page.waitForTimeout(3000);
 		logger.info("Reporting hovered");

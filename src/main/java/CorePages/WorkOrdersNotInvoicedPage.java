@@ -33,6 +33,7 @@ private static final Logger logger = Logger.getLogger(WorkOrdersNotInvoicedPage.
 	}
 	
 	public void workorder() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		page.waitForTimeout(3000);
 		logger.info("Reporting hovered");

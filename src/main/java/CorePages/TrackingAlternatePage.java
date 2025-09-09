@@ -44,6 +44,7 @@ private static final Logger logger = Logger.getLogger(TrackingAlternatePage.clas
 			rstbtn = page.locator("#MainContent_btnReset");
 	}
 	public void traltnte() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		page.waitForTimeout(3000);
 		logger.info("Reporting hovered");

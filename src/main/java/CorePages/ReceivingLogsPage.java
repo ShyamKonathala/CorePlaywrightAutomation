@@ -40,10 +40,13 @@ private static final Logger logger = Logger.getLogger(ReceivingLogsPage.class.ge
 	}
 	
 	public void logs() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reporting hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports Clicked");
+		page.waitForTimeout(5000);
 		lgsttle.click();
 		logger.info("Title Clicked");
 	}

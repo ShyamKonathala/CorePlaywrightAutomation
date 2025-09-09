@@ -31,10 +31,13 @@ Reporting = page.locator("//span[contains(text(),'Reporting')]");
 	}
 	
 	public void constt() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reporting hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports Clicked");
+		page.waitForTimeout(5000);
 		cnsttle.click();
 		logger.info("Title Clicked");
 		constituent.fill("NULLIFLY 32 OZ");

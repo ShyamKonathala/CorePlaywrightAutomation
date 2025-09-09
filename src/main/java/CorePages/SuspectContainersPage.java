@@ -32,6 +32,7 @@ private static final Logger logger = Logger.getLogger(SuspectContainersPage.clas
 			previous = page.locator("//div[@class = 'rgWrap rgArrPart1']/button[1]");
 	}
 	public void sspcntr() {
+		page.waitForTimeout(3000);
 		Reporting.hover();
 		page.waitForTimeout(3000);
 		logger.info("Reporting hovered");

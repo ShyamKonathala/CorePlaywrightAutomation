@@ -37,6 +37,7 @@ private static final Logger logger = Logger.getLogger(SolidWasteInboundPage.clas
 	}
 	
 	public void swste() {
+		page.waitForTimeout(3000);
 		Reporting.hover();
 		page.waitForTimeout(3000);
 		logger.info("Reporting hovered");

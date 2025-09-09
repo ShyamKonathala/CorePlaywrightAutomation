@@ -35,6 +35,7 @@ private static final Logger logger = Logger.getLogger(UserReportPage.class.getNa
 			
 	}
 	public void usrrpt() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		page.waitForTimeout(3000);
 		logger.info("Reporting hovered");

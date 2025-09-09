@@ -59,6 +59,7 @@ public class ProfileApprovalHistoryPage {
 	}
 	
 public void Approval() throws InterruptedException {
+	page.waitForTimeout(5000);
 	Reporting.hover();
 	page.waitForTimeout(5000);
 	

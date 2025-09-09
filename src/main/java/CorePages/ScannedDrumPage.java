@@ -38,10 +38,13 @@ private static final Logger logger = Logger.getLogger(ScannedDrumPage.class.getN
 	}
 	
 	public void Scndrm() {
+		page.waitForTimeout(5000);
 		Reporting.hover();
 		logger.info("Reporting hovered");
+		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports Clicked");
+		page.waitForTimeout(5000);
 		scnttle.click();
 		logger.info("Scanned Drum Title clicked");
 	}
