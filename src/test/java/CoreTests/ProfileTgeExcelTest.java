@@ -21,6 +21,7 @@ public class ProfileTgeExcelTest extends basetest {
 		ProfileTgeExcelPage ptp = new ProfileTgeExcelPage(getPage());
 		ptp.excel();
 		CommonDropdown cp = new CommonDropdown();
+		getPage().waitForTimeout(10000);
 		cp.selectFromDropdown(getPage(), PageLocators.prfleexcel_Arrow, PageLocators.prfleexcel_list, "257 - Republic Env Sys  (PA) LLC");
 		ptp.strtdte(start);
 		ptp.enddte(end);

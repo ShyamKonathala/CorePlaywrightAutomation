@@ -21,10 +21,10 @@ public class SuspectContainersTest extends basetest {
 	sp.srch();
 	sp.buttons();
 	CommonDropdown cp = new CommonDropdown();
-	getPage().waitForTimeout(10000);
+	getPage().waitForTimeout(5000);
 	cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "20");
-	getPage().waitForTimeout(10000);
-	cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "50");
-	getPage().waitForTimeout(10000);
+	//getPage().waitForTimeout(5000);
+	//cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "50");
+	getPage().waitForTimeout(5000);
 	}
 }

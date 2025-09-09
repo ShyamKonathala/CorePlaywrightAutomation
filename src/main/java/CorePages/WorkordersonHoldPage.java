@@ -42,13 +42,13 @@ private static final Logger logger = Logger.getLogger(WorkordersonHoldPage.class
 		page.waitForTimeout(3000);
 		wrkntinv.click();
 		logger.info("Workorder Title Clicked");
-		page.waitForTimeout(3000);
+		page.waitForTimeout(10000);
 		
 	}
 	public void expexl() throws IOException {
 		Path downloadedFile = FileUtils.downloadFile(page, () -> excel.click());
 	    logger.info("Excel Downloaded to: " + downloadedFile.toString());
-	    page.waitForTimeout(5000);
+	    page.waitForTimeout(10000);
 	}
 	
 	public void buttons() {

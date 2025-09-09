@@ -80,17 +80,20 @@ public void status(String svalue) {
 	String value = "//div[@id = 'ctl00_MainContent_rcbStatus_DropDown']/div/ul/li[contains(text(),'"+ svalue +"')]";
 	page.click(value);
 	logger.info("Status Value Selected");
+	page.waitForTimeout(5000);
 }
 
 public void srch() {
 	srchbtn.click();
 	logger.info("Search button clicked");
+	page.waitForTimeout(10000);
 	
 }
 
 public void expexl() throws IOException {
 	Path downloadedFile = FileUtils.downloadFile(page, () -> excel.click());
     logger.info("Excel Downloaded to: " + downloadedFile.toString());
+    page.waitForTimeout(5000);
 }
 public void buttons() {
 	next.click();

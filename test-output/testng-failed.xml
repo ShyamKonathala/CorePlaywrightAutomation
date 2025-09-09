@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CoreTests.ProfileApprovalReport">
+      <class name="CoreTests.WorkordersonHoldTest">
         <methods>
           <include name="setup"/>
-          <include name="ProfileApproval" invocation-numbers="0"/>
           <include name="teardown"/>
+          <include name="wrkord" invocation-numbers="0"/>
         </methods>
-      </class> <!-- CoreTests.ProfileApprovalReport -->
+      </class> <!-- CoreTests.WorkordersonHoldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
