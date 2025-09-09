@@ -46,11 +46,11 @@ private static final Logger logger = Logger.getLogger(TrackingAlternatePage.clas
 	public void traltnte() {
 		page.waitForTimeout(5000);
 		Reporting.hover();
-		page.waitForTimeout(3000);
+		page.waitForTimeout(5000);
 		logger.info("Reporting hovered");
 		Reports.click();
 		logger.info("Reports Clicked");
-		page.waitForTimeout(3000);
+		page.waitForTimeout(5000);
 		trttle.click();
 		
 		logger.info("Title Clicked");
@@ -88,6 +88,7 @@ public void srch() {
 	srchbtn.click();
 	page.waitForTimeout(5000);
 	logger.info("Search button Clicked");
+	page.waitForTimeout(1000);
 }
 public void expexl() throws IOException {
 	Path downloadedFile = FileUtils.downloadFile(page, () -> excel.click());

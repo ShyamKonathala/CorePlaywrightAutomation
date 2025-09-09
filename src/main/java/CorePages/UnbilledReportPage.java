@@ -39,14 +39,14 @@ private static final Logger logger = Logger.getLogger(UnbilledReportPage.class.g
 	public void Unbilled() {
 		page.waitForTimeout(5000);
 		Reporting.hover();
-		page.waitForTimeout(3000);
+		page.waitForTimeout(5000);
 		logger.info("Reporting hovered");
 		Reports.click();
 		logger.info("Reports Clicked");
-		page.waitForTimeout(3000);
+		page.waitForTimeout(5000);
 		unbttle.click();
 		logger.info("Unbilled Report Clicked");
-		page.waitForTimeout(3000);
+		page.waitForTimeout(5000);
 		
 	}
 	public void date() {

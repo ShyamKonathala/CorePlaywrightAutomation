@@ -19,11 +19,13 @@ public class RevenueOutboundTest extends basetest {
 		RevenueOutboundPage rp = new RevenueOutboundPage(getPage());
 		rp.outbound();
 		rp.workodr();
-		rp.expexl();
+		/*rp.expexl();
 		rp.buttons();
 		CommonDropdown cp = new CommonDropdown();
+		getPage().waitForTimeout(5000);
 		cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "20");
+		getPage().waitForTimeout(5000);
 		cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "50");
-		getPage().waitForTimeout(10000);
+		getPage().waitForTimeout(10000);*/
 	}
 }

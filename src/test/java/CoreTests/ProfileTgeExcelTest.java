@@ -27,8 +27,11 @@ public class ProfileTgeExcelTest extends basetest {
 		ptp.search();
 		ptp.expexl();
 		ptp.button();
+		getPage().waitForTimeout(5000);
 		cp.selectFromDropdown(getPage(), PageLocators.page_Arrow, PageLocators.page_size, "20");
+		getPage().waitForTimeout(5000);
 		cp.selectFromDropdown(getPage(), PageLocators.page_Arrow, PageLocators.page_size, "50");
+		getPage().waitForTimeout(5000);
 		
 	}
 }
