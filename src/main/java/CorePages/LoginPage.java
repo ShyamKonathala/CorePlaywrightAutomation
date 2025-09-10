@@ -18,7 +18,7 @@ public class LoginPage {
 	    private final String loginbtn = "#showHideOldLogin";
 	    private final String username = "#Login1_UserName";
 	    private final String pwd = "#Login1_Password";
-	    private final String oldloginbtn = "#Login1_LoginButton";
+	    private final String oldloginbtn = "//input[@id = 'Login1_LoginButton']";
 	    private final String dashboardFrame = "#frmMain"; // post-login element
 
 	    public LoginPage(Page page) {

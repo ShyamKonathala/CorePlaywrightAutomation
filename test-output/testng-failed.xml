@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CoreTests.WorkordersonHoldTest">
+      <class name="CoreTests.UniversalWasteTest">
         <methods>
+          <include name="unvwste" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="wrkord" invocation-numbers="0"/>
         </methods>
-      </class> <!-- CoreTests.WorkordersonHoldTest -->
+      </class> <!-- CoreTests.UniversalWasteTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
