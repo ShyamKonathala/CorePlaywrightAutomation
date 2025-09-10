@@ -88,7 +88,7 @@ public void srch() {
 	srchbtn.click();
 	page.waitForTimeout(5000);
 	logger.info("Search button Clicked");
-	page.waitForTimeout(1000);
+	page.waitForTimeout(10000);
 }
 public void expexl() throws IOException {
 	Path downloadedFile = FileUtils.downloadFile(page, () -> excel.click());

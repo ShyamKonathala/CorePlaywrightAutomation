@@ -44,7 +44,7 @@ private static final Logger logger = Logger.getLogger(UnbilledReportPage.class.g
 		page.waitForTimeout(5000);
 		Reports.click();
 		logger.info("Reports Clicked");
-		page.waitForTimeout(5000);
+		page.waitForTimeout(10000);
 		unbttle.click();
 		logger.info("Unbilled Report Clicked");
 		page.waitForTimeout(5000);
