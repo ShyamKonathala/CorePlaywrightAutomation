@@ -53,12 +53,12 @@ private static final Logger logger = Logger.getLogger(UniversalWastePage.class.g
 	}
 	public void dropdwn(String Plant) {
 		Arrow.click();
-		page.waitForTimeout(4000);
+		page.waitForTimeout(10000);
 		logger.info("Arrow Clicked");
 		String value = "//div[@id = 'ctl00_MainContent_PlantId_DropDown']/div/ul/li[contains(text(),'"+ Plant  +"')]";
 		page.click(value);
 		logger.info("Value Selected");
-		page.waitForTimeout(4000);
+		page.waitForTimeout(5000);
 	}
 	
 	public void start(String startdate) {
