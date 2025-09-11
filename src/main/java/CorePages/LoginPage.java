@@ -23,13 +23,13 @@ public class LoginPage {
 
 	    public LoginPage(Page page) {
 	    	this.page = page;
-	        page.setDefaultTimeout(30000);
+	        //page.setDefaultTimeout(30000);
 	        
 	       
 	    }
 
 	    public void login(String user, String pass) {
-	        page.setDefaultTimeout(30000);
+	       // page.setDefaultTimeout(50000);
 
 	        // Step 1: Open login form
 	        page.click(loginbtn);
@@ -39,7 +39,9 @@ public class LoginPage {
 	        page.fill(pwd, pass);
 
 	        // Step 3: Click login without waiting for navigation
-	        page.locator(oldloginbtn).click(new Locator.ClickOptions().setTimeout(60000));
+	       // page.locator(oldloginbtn).click(new Locator.ClickOptions().setTimeout(60000));
+	        
+	        page.click(oldloginbtn);
 	        
 
 	        /*page.waitForSelector("#ajaxLoading", 

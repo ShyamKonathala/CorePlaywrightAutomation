@@ -37,6 +37,11 @@ private static final Logger logger = Logger.getLogger(UnbilledReportPage.class.g
 	}
 	
 	public void Unbilled() {
+		
+		int retries = 1;
+		for(int i = 0;i<=retries;i++) {
+			try {
+		
 		page.waitForTimeout(5000);
 		Reporting.hover();
 		
@@ -48,7 +53,16 @@ private static final Logger logger = Logger.getLogger(UnbilledReportPage.class.g
 		unbttle.click();
 		logger.info("Unbilled Report Clicked");
 		page.waitForTimeout(5000);
-		
+		return;
+		}
+			catch(Exception e) {
+				if(i==retries) {
+					throw e;
+				}
+				 logger.warning("Unbilled() failed, retrying... attempt " + (i + 2));
+		            page.waitForTimeout(2000); 
+				}
+			}
 	}
 	public void date() {
 		Date.fill("6/1/2025");

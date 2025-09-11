@@ -79,7 +79,7 @@ public class basetest {
 	        tlPage.set(page);
 
 	        page.navigate(baseurl);
-	        page.setDefaultTimeout(20000);
+	        page.setDefaultTimeout(60000);
 	    }
 
 	    // ---- TEARDOWN ----

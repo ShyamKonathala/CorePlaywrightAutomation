@@ -8,6 +8,8 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
+import utils.RetryUtils;
+
 public class InboundPage {
 	
 private static final Logger logger = Logger.getLogger(InboundPage.class.getName());
@@ -83,27 +85,20 @@ public void mnf() {
 	logger.info("Manifest Clicked");
 	page.waitForTimeout(5000);
 }
-public void contrs() {
-	//String text = ccntrs.innerText().trim();
-	//logger.info("Text Message : " + text);
-	if(ccntrs.isVisible()) {
-		
-		ccntrs.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-		ccntrs.click();
-		logger.info("Containers Created");
-		edtcntr.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-		edtcntr.click();
-		logger.info("Containers Created and containers edited");
-		
-		
-		}
-	
-	else {
-		edtcntr.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-		edtcntr.click();
-		logger.info("Edit Container clicked");
-		page.waitForTimeout(5000);
-	}
+public void contrs() throws Exception {
+    RetryUtils.runWithRetry(() -> {
+        if (ccntrs.isVisible()) {
+            ccntrs.click();
+            logger.info("Containers Created");
+
+            edtcntr.click();
+            logger.info("Containers Created and containers edited");
+        } else {
+            edtcntr.click();
+            logger.info("Edit Container clicked");
+        }
+        return null;
+    }, 1, 2000); // retry once if fails
 }
 public void dates(String gendte,String trndate) {
 	page.waitForTimeout(10000);

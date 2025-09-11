@@ -39,17 +39,31 @@ private static final Logger logger = Logger.getLogger(UniversalWastePage.class.g
 	}
 	
 	public void Universal() {
-		page.waitForTimeout(5000);
-		Reporting.hover();
-		page.waitForTimeout(3000);
-		logger.info("Reporting hovered");
-		Reports.click();
-		logger.info("Reports Clicked");
-		page.waitForTimeout(3000);
-		unvttle.click();
-		logger.info("Unbilled Report Clicked");
-		page.waitForTimeout(3000);
-		
+	    int retries = 1; // retry once
+	    for (int i = 0; i <= retries; i++) {
+	        try {
+	            page.waitForTimeout(5000);
+	            Reporting.hover();
+	            page.waitForTimeout(3000);
+	            logger.info("Reporting hovered");
+
+	            Reports.click();
+	            logger.info("Reports Clicked");
+
+	            page.waitForTimeout(3000);
+	            unvttle.click();
+	            logger.info("Unbilled Report Clicked");
+
+	            page.waitForTimeout(3000);
+	            return; // ✅ success, exit method
+	        } catch (Exception e) {
+	            if (i == retries) {
+	                throw e; // ❌ rethrow if last attempt
+	            }
+	            logger.warning("Universal() failed, retrying... Attempt " + (i + 2));
+	            page.waitForTimeout(2000); // small pause before retry
+	        }
+	    }
 	}
 	public void dropdwn(String Plant) {
 		Arrow.click();

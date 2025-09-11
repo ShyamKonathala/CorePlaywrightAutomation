@@ -9,7 +9,7 @@ import utils.ExcelDataProvider;
 
 public class InboundsTest extends basetest {
 	@Test(dataProvider = "InboundsDB",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
-	public void inbnd(String user,String pass,String manifestNumber,String gendte,String trndate) {
+	public void inbnd(String user,String pass,String manifestNumber,String gendte,String trndate) throws Exception {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);
 		InboundPage ip = new InboundPage(getPage());
