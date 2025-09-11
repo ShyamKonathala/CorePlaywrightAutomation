@@ -24,7 +24,9 @@ public class ProfilePricingTest extends basetest {
 		ppp.expexl();
 		ppp.buttons();
 		CommonDropdown cp = new CommonDropdown();
+		getPage().waitForTimeout(10000);
 		cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "20");
+		getPage().waitForTimeout(10000);
 		cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "50");
 		getPage().waitForTimeout(5000);
 	}

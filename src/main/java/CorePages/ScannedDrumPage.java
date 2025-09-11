@@ -63,6 +63,7 @@ private static final Logger logger = Logger.getLogger(ScannedDrumPage.class.getN
 	public void expexl() throws IOException {
 		Path downloadedFile = FileUtils.downloadFile(page, () -> excel.click());
 	    logger.info("Excel Downloaded to: " + downloadedFile.toString());
+	    page.waitForTimeout(5000);
 	}
 	public void buttons() {
 		next.click();

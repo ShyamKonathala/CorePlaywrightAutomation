@@ -126,11 +126,12 @@ public class ExcelDataProvider {
 	public static Object[][] getData20() throws IOException{
 		String filepath = ConfigReader.get("excelFilePath");
 		
-		Object[][] data = new Object[1][3];
+		Object[][] data = new Object[1][4];
 		
 		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Countries", 1, 0);//Countries
+		data[0][3] = ExcelUtils.getCellData(filepath, "Countries", 1, 1);//State
 		
 		
 		

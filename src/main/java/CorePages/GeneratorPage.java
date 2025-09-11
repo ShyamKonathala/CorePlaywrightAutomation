@@ -21,6 +21,8 @@ public class GeneratorPage {
 	private Locator genarrw;
 	private Locator stecty;
 	private Locator sttearrw;
+	private Locator genzp;
+	private Locator cntyarrw;
 	
 	public GeneratorPage(Page page) {
 		this.page = page;
@@ -32,6 +34,8 @@ public class GeneratorPage {
 		genarrw = page.locator("#ctl00_MainContent_RCSiteCountry button.rcbActionButton");
 		stecty = page.locator("//span[@id = 'ctl00_MainContent_txtCity_wrapper']/input[1]");
 		sttearrw = page.locator("#ctl00_MainContent_ddlState button.rcbActionButton");
+		genzp = page.locator("//span[@id = 'ctl00_MainContent_txtZip_wrapper']/input[1]");
+		cntyarrw = page.locator("#ctl00_MainContent_ddlCounty button.rcbActionButton");
 	}
 
 	
@@ -65,6 +69,15 @@ public class GeneratorPage {
 		String sttevle = "//div[@id = 'ctl00_MainContent_ddlState_DropDown']/div/ul/li[contains(text(),'"+ State +"')]";
 		page.click(sttevle);
 		logger.info("State Selected");
+		
+		genzp.fill("35637");
+		logger.info("ZIP entered");
+		
+		cntyarrw.click();
+		logger.info("County Arrow Clicked");
+		
+		
+		
 		
 		
 		
