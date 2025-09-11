@@ -59,12 +59,13 @@ excel = page.locator("//a[contains(@id,'lbExport')]");
 	public void expexl() throws IOException {
 		Path downloadedFile = FileUtils.downloadFile(page, () -> excel.click());
 	    logger.info("Excel Downloaded to: " + downloadedFile.toString());
+	    page.waitForTimeout(10000);
 	}
 	public void buttons() {
-		page.waitForTimeout(10000);
+		
 		next.click();
 		logger.info("Next Button Clicked");
-		page.waitForTimeout(5000);
+		page.waitForTimeout(10000);
 		previous.click();
 		logger.info("Previous Button Clicked");
 		page.waitForTimeout(5000);

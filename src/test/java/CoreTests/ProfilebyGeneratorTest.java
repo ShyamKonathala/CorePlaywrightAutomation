@@ -21,7 +21,9 @@ public class ProfilebyGeneratorTest extends basetest {
 		pgp.expexl();
 		pgp.buttons();
 		CommonDropdown cp = new CommonDropdown();
+		getPage().waitForTimeout(5000);
 		cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "20");
+		getPage().waitForTimeout(5000);
 		cp.selectFromDropdown(getPage(), PageLocators.customer_Arrow, PageLocators.customer_size, "50");
 	}
 }
