@@ -15,6 +15,7 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 import base.basetest;
 import utils.ConfigReader;
 import utils.ExcelUtils;
+import utils.ManifestUtils;
 
 public class WorkorderPage {
 	
@@ -229,7 +230,9 @@ public class WorkorderPage {
 	public void manifest(String facility) {
 		mnf.click();
 		logger.info("New Manifest added");
-		mnftrnmbr.fill("434536767CLE");
+		String manifestnumber = ManifestUtils.generateManifestTrackingNumber();
+		logger.info(manifestnumber);
+		mnftrnmbr.fill(manifestnumber);
 		logger.info("Manifest entered");
 		
 		String value = "//div[@id = 'ctl00_MainContent_DetailsView1_vendorDDL_DropDown']/div/ul/li[contains(text(),'" + facility + "')]";

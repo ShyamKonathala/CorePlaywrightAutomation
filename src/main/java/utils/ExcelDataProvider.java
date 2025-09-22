@@ -15,7 +15,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][4];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Login", 1, 2);
 		data[0][3] = ExcelUtils.getCellData(filepath, "Login", 1, 3);
@@ -30,7 +30,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][5];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Values", 8, 1); //Dropdown Values
 		
@@ -48,7 +48,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][6];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Customers", 2, 0); //Customers
 		data[0][3] = ExcelUtils.getCellData(filepath, "Generators", 1, 0); //Generators
@@ -65,7 +65,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][3];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Login", 1, 2);
 		
@@ -81,7 +81,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][5];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Facilities", 7, 0); //Facilities
 		data[0][3] = ExcelUtils.getCellData(filepath, "Login", 1, 2);
@@ -100,7 +100,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][2];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		
 		return data;
@@ -113,7 +113,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][3];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Customers", 3, 0);//Customers
 		
@@ -126,12 +126,13 @@ public class ExcelDataProvider {
 	public static Object[][] getData20() throws IOException{
 		String filepath = ConfigReader.get("excelFilePath");
 		
-		Object[][] data = new Object[1][4];
+		Object[][] data = new Object[1][5];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Countries", 1, 0);//Countries
 		data[0][3] = ExcelUtils.getCellData(filepath, "Countries", 1, 1);//State
+		data[0][4] = ExcelUtils.getCellData(filepath, "Countries", 2, 2);//County
 		
 		
 		
@@ -145,7 +146,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][5];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Facilities", 13, 0);//Facilities
 		data[0][3] = ExcelUtils.getCellData(filepath, "Login", 1, 2);//Start Date
@@ -163,7 +164,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][3];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Generators", 3, 0);//Generators
 		
@@ -195,7 +196,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][5];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Customers", 1, 0); // Customers
 		data[0][3] = ExcelUtils.getCellData(filepath, "Generators", 4, 0); // Generators
@@ -233,14 +234,14 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][10];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0); //User Name
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Customers",2,0); // Customers
 		data[0][3] = ExcelUtils.getCellData(filepath, "Generators",1,0); //Generators
 		data[0][4] = ExcelUtils.getCellData(filepath, "SalesRep",1,0); //Salesrep
 		data[0][5] = ExcelUtils.getCellData(filepath, "InsideSalesRep",2,0); //InsideSalesRep
 		data[0][6] = ExcelUtils.getCellData(filepath, "CSR",4,0); //CSR
-		data[0][7] = ExcelUtils.getCellData(filepath, "Facilities",6,0); //Facilities
+		data[0][7] = ExcelUtils.getCellData(filepath, "Facilities",16,0); //Facilities
 		data[0][8] = ExcelUtils.getCellData(filepath, "Container",2,0);//Container Type
 		data[0][9] = ExcelUtils.getCellData(filepath, "Container",1,1);//Unit
 		return data;
@@ -295,7 +296,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][4];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "SalesRep", 1, 0);
 		data[0][3] = ExcelUtils.getCellData(filepath, "Customers", 1, 0);
@@ -313,7 +314,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][4];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Customers", 2, 0);
 		data[0][3] = ExcelUtils.getCellData(filepath, "Generators", 1, 0);
@@ -392,6 +393,39 @@ public class ExcelDataProvider {
 	                pwd,
 	                rs.getString("manifest_tracking_number"),
 	                gendte,trndate
+	            });
+	        }
+	    } finally {
+	        DBUtils.closeResources(rs, stmt);
+	        DBUtils.closeConnection();
+	    }
+
+	    return dataList.toArray(new Object[0][]);
+	}
+	
+	@DataProvider(name = "GeneratorDB")
+	public static Object[][] getGenData() throws Exception {
+	    String filepath = ConfigReader.get("excelFilePath");
+	    String userid = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+	    String pwd = ExcelUtils.getCellData(filepath, "Login", 1, 1);
+	   
+
+	    String query = "select * from generator where generatorid = '582'";
+
+	    List<Object[]> dataList = new ArrayList<>();
+	    ResultSet rs = null;
+	    Statement stmt = null;
+
+	    try {
+	        stmt = DBUtils.getConnection().createStatement();
+	        rs = stmt.executeQuery(query);
+
+	        while (rs.next()) {
+	            dataList.add(new Object[] {
+	                userid,
+	                pwd,
+	                rs.getString("generatorid")
+	                
 	            });
 	        }
 	    } finally {
