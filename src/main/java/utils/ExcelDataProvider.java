@@ -241,7 +241,7 @@ public class ExcelDataProvider {
 		data[0][4] = ExcelUtils.getCellData(filepath, "SalesRep",1,0); //Salesrep
 		data[0][5] = ExcelUtils.getCellData(filepath, "InsideSalesRep",2,0); //InsideSalesRep
 		data[0][6] = ExcelUtils.getCellData(filepath, "CSR",4,0); //CSR
-		data[0][7] = ExcelUtils.getCellData(filepath, "Facilities",16,0); //Facilities
+		data[0][7] = ExcelUtils.getCellData(filepath, "Facilities",6,0); //Facilities
 		data[0][8] = ExcelUtils.getCellData(filepath, "Container",2,0);//Container Type
 		data[0][9] = ExcelUtils.getCellData(filepath, "Container",1,1);//Unit
 		return data;

@@ -9,99 +9,40 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">346,206</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">144,903</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m0">setup</a></td><td rowspan="1">1758276366564</td><td rowspan="1">3027</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m1">workorder</a></td><td rowspan="1">1758276369595</td><td rowspan="1">2</td></tr><tr><th colspan="4">Default test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m2">workorder</a></td><td rowspan="1">1758276040275</td><td rowspan="1">325908</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m0">workorder</a></td><td rowspan="1">1758545713672</td><td rowspan="1">62521</td></tr><tr><th colspan="4">Default test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m1">workorder</a></td><td rowspan="1">1758545645643</td><td rowspan="1">61742</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">CoreTests.WorkorderTest#setup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.PlaywrightException: Error {
-  message=&apos;net::ERR_ABORTED; maybe frame was detached?
-  name=&apos;Error
-  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
-    at FrameManager.frameAbortedNavigation (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\frames.js:204:14)
-    at FrameManager.requestFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\frames.js:254:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\chromium\crNetworkManager.js:461:55)
-    at CRSession.emit (node:events:518:28)
-    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\chromium\crConnection.js:138:14
+<h2>Default test</h2><h3 id="m0">CoreTests.WorkorderTest#workorder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>11957</td><td>582</td><td>Abadia, Julio</td><td>Conduit, Steven</td><td>Almonte, Sonya</td><td>1 - Clean Earth of Calvert City (AESKY) - 1689 Shar-Cal Road, Calvert City, KY 42029 - 1</td><td>DM</td><td>P</td></tr><tr><th colspan="10">Exception</th></tr><tr><td colspan="10"><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 60000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 60000ms exceeded.
+    at ProgressController.run (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\progress.js:65:26)
+    at FrameDispatcher._runCommand (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\dispatchers\dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\dispatchers\dispatcher.js:322:39)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:453:9)
 }
 Call log:
--   - navigating to &quot;https://coreqa.cleanearthinc.com/Login.aspx&quot;, waiting until &quot;load&quot;
+-   - waiting for locator(&quot;//input[@id = &apos;Login1_LoginButton&apos;]&quot;)
+-     - locator resolved to &lt;input type=&quot;submit&quot; value=&quot;Sign In&quot; id=&quot;Login1_LoginButton&quot; name=&quot;Login1$LoginButton&quot; class=&quot;btn btn-primary center-block&quot; onclick=&quot;javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Login1$LoginButton&quot;, &quot;&quot;, true, &quot;Login1&quot;, &quot;&quot;, false, false))&quot;/&gt;
+-   - attempting click action
+-     - waiting for element to be visible, enabled and stable
+-     - element is visible, enabled and stable
+-     - scrolling into view if needed
+-     - done scrolling
+-     - performing click action
+-     - click action done
+-     - waiting for scheduled navigations to finish
 
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:419)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:918)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
-	at com.microsoft.playwright.Page.navigate(Page.java:5491)
-	at base.basetest.setup(basetest.java:81)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: com.microsoft.playwright.impl.DriverException: Error {
-  message=&apos;net::ERR_ABORTED; maybe frame was detached?
-  name=&apos;Error
-  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
-    at FrameManager.frameAbortedNavigation (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\frames.js:204:14)
-    at FrameManager.requestFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\frames.js:254:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\chromium\crNetworkManager.js:461:55)
-    at CRSession.emit (node:events:518:28)
-    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\chromium\crConnection.js:138:14
-}
-Call log:
--   - navigating to &quot;https://coreqa.cleanearthinc.com/Login.aspx&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 39 more
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">CoreTests.WorkorderTest#workorder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>11957</td><td>582</td><td>Abadia, Julio</td><td>Conduit, Steven</td><td>Almonte, Sonya</td><td>2079 - Clean Earth of Alabama, Inc. (CEA)</td><td>DM</td><td>P</td></tr><tr><th colspan="10">Exception</th></tr><tr><td colspan="10"><div class="stacktrace">com.microsoft.playwright.impl.TargetClosedError: Error {
-  message=&apos;Target page, context or browser has been closed
-  name=&apos;TargetClosedError
-  stack=&apos;TargetClosedError: Target page, context or browser has been closed
-    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\dispatchers\dispatcher.js:256:69)
-    at transport.onmessage (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\cli\driver.js:53:59)
-    at Immediate._onImmediate (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\utils\pipeTransport.js:76:16)
-    at process.processImmediate (node:internal/timers:485:21)
-}
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
 	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
 	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
 	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
 	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:680)
 	at com.microsoft.playwright.Page.click(Page.java:3931)
-	at CorePages.LoginPage.login(LoginPage.java:35)
+	at CorePages.LoginPage.login(LoginPage.java:44)
 	at CoreTests.WorkorderTest.workorder(WorkorderTest.java:16)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -131,36 +72,52 @@ Call log:
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
-  message=&apos;Target page, context or browser has been closed
-  name=&apos;TargetClosedError
-  stack=&apos;TargetClosedError: Target page, context or browser has been closed
-    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\dispatchers\dispatcher.js:256:69)
-    at transport.onmessage (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\cli\driver.js:53:59)
-    at Immediate._onImmediate (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\utils\pipeTransport.js:76:16)
-    at process.processImmediate (node:internal/timers:485:21)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 60000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 60000ms exceeded.
+    at ProgressController.run (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\progress.js:65:26)
+    at FrameDispatcher._runCommand (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\dispatchers\dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\dispatchers\dispatcher.js:322:39)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:453:9)
 }
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+Call log:
+-   - waiting for locator(&quot;//input[@id = &apos;Login1_LoginButton&apos;]&quot;)
+-     - locator resolved to &lt;input type=&quot;submit&quot; value=&quot;Sign In&quot; id=&quot;Login1_LoginButton&quot; name=&quot;Login1$LoginButton&quot; class=&quot;btn btn-primary center-block&quot; onclick=&quot;javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Login1$LoginButton&quot;, &quot;&quot;, true, &quot;Login1&quot;, &quot;&quot;, false, false))&quot;/&gt;
+-   - attempting click action
+-     - waiting for element to be visible, enabled and stable
+-     - element is visible, enabled and stable
+-     - scrolling into view if needed
+-     - done scrolling
+-     - performing click action
+-     - click action done
+-     - waiting for scheduled navigations to finish
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
 	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
 	... 35 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">CoreTests.WorkorderTest#workorder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>11957</td><td>582</td><td>Abadia, Julio</td><td>Conduit, Steven</td><td>Almonte, Sonya</td><td>2079 - Clean Earth of Alabama, Inc. (CEA)</td><td>DM</td><td>P</td></tr><tr><th colspan="10">Exception</th></tr><tr><td colspan="10"><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
+<h3 id="m1">CoreTests.WorkorderTest#workorder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>11957</td><td>582</td><td>Abadia, Julio</td><td>Conduit, Steven</td><td>Almonte, Sonya</td><td>1 - Clean Earth of Calvert City (AESKY) - 1689 Shar-Cal Road, Calvert City, KY 42029 - 1</td><td>DM</td><td>P</td></tr><tr><th colspan="10">Exception</th></tr><tr><td colspan="10"><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
   message=&apos;Timeout 60000ms exceeded.
   name=&apos;TimeoutError
   stack=&apos;TimeoutError: Timeout 60000ms exceeded.
-    at ProgressController.run (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\dispatchers\dispatcher.js:322:39)
+    at ProgressController.run (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\progress.js:65:26)
+    at FrameDispatcher._runCommand (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\dispatchers\dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\dispatchers\dispatcher.js:322:39)
 }
 Call log:
--   - waiting for locator(&quot;//div[@id = &apos;ctl00_MainContent_DetailsView1_rcbProfileName_DropDown&apos;]/div/ul/li[contains(text(),&apos;OBC-90354-492 GARDOBOND 24 E16 TO HERITAGE INDY/WWT - NO LANDFILL&apos;)]&quot;)
--     2 × waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?RowID=6930723&amp;ManifestID=4833003&quot; navigation to finish...
--       - navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?RowID=6930723&amp;ManifestID=4833003&quot;
--     - waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?RowID=6930723&amp;ManifestID=4833003&quot; navigation to finish...
--     2 × navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=4833003&amp;RowID=6930724&quot;
--       - waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=4833003&amp;RowID=6930724&quot; navigation to finish...
--     - navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=4833003&amp;RowID=6930724&quot;
+-   - waiting for locator(&quot;//input[@id = &apos;Login1_LoginButton&apos;]&quot;)
+-     - locator resolved to &lt;input type=&quot;submit&quot; value=&quot;Sign In&quot; id=&quot;Login1_LoginButton&quot; name=&quot;Login1$LoginButton&quot; class=&quot;btn btn-primary center-block&quot; onclick=&quot;javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Login1$LoginButton&quot;, &quot;&quot;, true, &quot;Login1&quot;, &quot;&quot;, false, false))&quot;/&gt;
+-   - attempting click action
+-     - waiting for element to be visible, enabled and stable
+-     - element is visible, enabled and stable
+-     - scrolling into view if needed
+-     - done scrolling
+-     - performing click action
+-     - click action done
+-     - waiting for scheduled navigations to finish
 
 	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
@@ -169,8 +126,8 @@ Call log:
 	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
 	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:680)
 	at com.microsoft.playwright.Page.click(Page.java:3931)
-	at CorePages.WorkorderPage.detail(WorkorderPage.java:314)
-	at CoreTests.WorkorderTest.workorder(WorkorderTest.java:24)
+	at CorePages.LoginPage.login(LoginPage.java:44)
+	at CoreTests.WorkorderTest.workorder(WorkorderTest.java:16)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -203,18 +160,21 @@ Caused by: com.microsoft.playwright.TimeoutError: Error {
   message=&apos;Timeout 60000ms exceeded.
   name=&apos;TimeoutError
   stack=&apos;TimeoutError: Timeout 60000ms exceeded.
-    at ProgressController.run (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-5711925529850364754\package\lib\server\dispatchers\dispatcher.js:322:39)
+    at ProgressController.run (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\progress.js:65:26)
+    at FrameDispatcher._runCommand (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\dispatchers\dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-12823980155497351562\package\lib\server\dispatchers\dispatcher.js:322:39)
 }
 Call log:
--   - waiting for locator(&quot;//div[@id = &apos;ctl00_MainContent_DetailsView1_rcbProfileName_DropDown&apos;]/div/ul/li[contains(text(),&apos;OBC-90354-492 GARDOBOND 24 E16 TO HERITAGE INDY/WWT - NO LANDFILL&apos;)]&quot;)
--     2 × waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?RowID=6930723&amp;ManifestID=4833003&quot; navigation to finish...
--       - navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?RowID=6930723&amp;ManifestID=4833003&quot;
--     - waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?RowID=6930723&amp;ManifestID=4833003&quot; navigation to finish...
--     2 × navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=4833003&amp;RowID=6930724&quot;
--       - waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=4833003&amp;RowID=6930724&quot; navigation to finish...
--     - navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=4833003&amp;RowID=6930724&quot;
+-   - waiting for locator(&quot;//input[@id = &apos;Login1_LoginButton&apos;]&quot;)
+-     - locator resolved to &lt;input type=&quot;submit&quot; value=&quot;Sign In&quot; id=&quot;Login1_LoginButton&quot; name=&quot;Login1$LoginButton&quot; class=&quot;btn btn-primary center-block&quot; onclick=&quot;javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Login1$LoginButton&quot;, &quot;&quot;, true, &quot;Login1&quot;, &quot;&quot;, false, false))&quot;/&gt;
+-   - attempting click action
+-     - waiting for element to be visible, enabled and stable
+-     - element is visible, enabled and stable
+-     - scrolling into view if needed
+-     - done scrolling
+-     - performing click action
+-     - click action done
+-     - waiting for scheduled navigations to finish
 
 	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
 	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
