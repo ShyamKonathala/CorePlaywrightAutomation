@@ -179,7 +179,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][4];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Customers", 1, 0); // Customers
 		data[0][3] = ExcelUtils.getCellData(filepath, "Generators", 4, 0); // Generators
@@ -213,7 +213,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][6];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "Customers", 1, 0); // Customers
 		data[0][3] = ExcelUtils.getCellData(filepath, "Generators", 4, 0); // Generators
@@ -254,7 +254,7 @@ public class ExcelDataProvider {
 		
 		Object[][] data = new Object[1][6];
 		
-		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+		data[0][0] = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 		data[0][1] = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 		data[0][2] = ExcelUtils.getCellData(filepath, "TankNumber", 1, 0);//Tank
 		
@@ -329,7 +329,7 @@ public class ExcelDataProvider {
 	@DataProvider(name = "InterCompany")
 	public static Object[][] Inter() throws Exception {
 	    String filepath = ConfigReader.get("excelFilePath");
-	    String userid = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+	    String userid = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 	    String pwd = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 	    String customer = ExcelUtils.getCellData(filepath, "Customers", 6, 0);
 	    String type = ExcelUtils.getCellData(filepath, "Container",2,0);//Container Type
@@ -372,7 +372,7 @@ public class ExcelDataProvider {
 	@DataProvider(name = "InboundsDB")
 	public static Object[][] getManifestData() throws Exception {
 	    String filepath = ConfigReader.get("excelFilePath");
-	    String userid = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+	    String userid = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 	    String pwd = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 	    String gendte = ExcelUtils.getCellData(filepath, "Login", 95, 2);
 	    String trndate = ExcelUtils.getCellData(filepath, "Login", 94, 2);
@@ -406,7 +406,7 @@ public class ExcelDataProvider {
 	@DataProvider(name = "GeneratorDB")
 	public static Object[][] getGenData() throws Exception {
 	    String filepath = ConfigReader.get("excelFilePath");
-	    String userid = ExcelUtils.getCellData(filepath, "Login", 1, 0);
+	    String userid = ExcelUtils.getCellData(filepath, "Login", 5, 0);
 	    String pwd = ExcelUtils.getCellData(filepath, "Login", 1, 1);
 	   
 

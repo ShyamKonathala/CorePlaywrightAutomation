@@ -8,7 +8,7 @@ import base.basetest;
 import utils.ExcelDataProvider;
 
 public class GeneratorTest extends basetest {
-	@Test(dataProvider = "Addgen",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
+	@Test(groups = {"smoke"},dataProvider = "Addgen",dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void genertr(String user,String pass,String generator,String State,String County) throws Exception {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

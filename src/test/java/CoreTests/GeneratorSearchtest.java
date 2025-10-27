@@ -8,7 +8,7 @@ import base.basetest;
 import utils.ExcelDataProvider;
 
 public class GeneratorSearchtest extends basetest {
-	@Test(dataProvider = "GeneratorDB", dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
+	@Test(groups = {"smoke"},dataProvider = "GeneratorDB", dataProviderClass = ExcelDataProvider.class,retryAnalyzer = utils.RetryAnalyzer.class)
 	public void gentr(String user,String pass,String generator) {
 		LoginPage lo = new LoginPage(getPage());
 		lo.login(user, pass);

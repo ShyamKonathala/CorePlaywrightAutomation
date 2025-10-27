@@ -9,34 +9,31 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">475,824</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">262,876</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m0">workorder</a></td><td rowspan="1">1758705394501</td><td rowspan="1">382104</td></tr><tr><th colspan="4">Default test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m1">workorder</a></td><td rowspan="1">1758705316890</td><td rowspan="1">72114</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m0">workorder</a></td><td rowspan="1">1760090090833</td><td rowspan="1">64760</td></tr><tr><th colspan="4">Default test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">CoreTests.WorkorderTest</td><td><a href="#m1">workorder</a></td><td rowspan="1">1760089911873</td><td rowspan="1">174064</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">CoreTests.WorkorderTest#workorder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>11957</td><td>582</td><td>Abadia, Julio</td><td>Conduit, Steven</td><td>Almonte, Sonya</td><td>1 - Clean Earth of Calvert City (AESKY) - 1689 Shar-Cal Road, Calvert City, KY 42029 - 1</td><td>DM</td><td>P</td></tr><tr><th colspan="10">Exception</th></tr><tr><td colspan="10"><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 60000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 60000ms exceeded.
-    at ProgressController.run (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-17170967552292787042\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-17170967552292787042\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-17170967552292787042\package\lib\server\dispatchers\dispatcher.js:322:39)
+<h2>Default test</h2><h3 id="m0">CoreTests.WorkorderTest#workorder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>11957</td><td>582</td><td>Abadia, Julio</td><td>Conduit, Steven</td><td>Almonte, Sonya</td><td>3308 - Chemical Reclamation Services</td><td>DM</td><td>P</td></tr><tr><th colspan="10">Exception</th></tr><tr><td colspan="10"><div class="stacktrace">com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\dispatchers\dispatcher.js:105:30)
+    at Page.&lt;anonymous&gt; (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\dispatchers\pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\page.js:172:10)
+    at CRPage.didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\chromium\crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\chromium\crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\chromium\crConnection.js:138:14
 }
-Call log:
--   - waiting for locator(&quot;//div[@id = &apos;ctl00_MainContent_DetailsView1_rcbProfileName_DropDown&apos;]/div/ul/li[contains(text(),&apos;OBC-90354-267 REDUCING AGENT L063 - MAX DRUM SIZE 85GL&apos;)]&quot;)
--     2 × waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=5098571&amp;RowID=7461371&quot; navigation to finish...
--       - navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=5098571&amp;RowID=7461371&quot;
--     - waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=5098571&amp;RowID=7461371&quot; navigation to finish...
--     - navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/ManageManifestDetails.aspx?ManifestID=5098571&quot;
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
 	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
 	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
-	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:680)
-	at com.microsoft.playwright.Page.click(Page.java:3931)
-	at CorePages.WorkorderPage.detail(WorkorderPage.java:314)
-	at CoreTests.WorkorderTest.workorder(WorkorderTest.java:24)
+	at com.microsoft.playwright.impl.FrameImpl.waitForTimeout(FrameImpl.java:997)
+	at com.microsoft.playwright.impl.PageImpl.waitForTimeout(PageImpl.java:1532)
+	at CorePages.WorkorderPage.gen(WorkorderPage.java:165)
+	at CoreTests.WorkorderTest.workorder(WorkorderTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,45 +62,47 @@ Call log:
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 60000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 60000ms exceeded.
-    at ProgressController.run (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-17170967552292787042\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-17170967552292787042\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-17170967552292787042\package\lib\server\dispatchers\dispatcher.js:322:39)
-}
-Call log:
--   - waiting for locator(&quot;//div[@id = &apos;ctl00_MainContent_DetailsView1_rcbProfileName_DropDown&apos;]/div/ul/li[contains(text(),&apos;OBC-90354-267 REDUCING AGENT L063 - MAX DRUM SIZE 85GL&apos;)]&quot;)
--     2 × waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=5098571&amp;RowID=7461371&quot; navigation to finish...
--       - navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=5098571&amp;RowID=7461371&quot;
--     - waiting for&quot; https://coreqa.cleanearthinc.com/App/Manifests/EditManifestDetail.aspx?ManifestID=5098571&amp;RowID=7461371&quot; navigation to finish...
--     - navigated to &quot;https://coreqa.cleanearthinc.com/App/Manifests/ManageManifestDetails.aspx?ManifestID=5098571&quot;
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 35 more
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">CoreTests.WorkorderTest#workorder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>11957</td><td>582</td><td>Abadia, Julio</td><td>Conduit, Steven</td><td>Almonte, Sonya</td><td>1 - Clean Earth of Calvert City (AESKY) - 1689 Shar-Cal Road, Calvert City, KY 42029 - 1</td><td>DM</td><td>P</td></tr><tr><th colspan="10">Exception</th></tr><tr><td colspan="10"><div class="stacktrace">com.microsoft.playwright.impl.TargetClosedError: Error {
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
   message=&apos;Target page, context or browser has been closed
   name=&apos;TargetClosedError
   stack=&apos;TargetClosedError: Target page, context or browser has been closed
-    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-17170967552292787042\package\lib\server\dispatchers\dispatcher.js:333:15)
+    at PageDispatcher._dispose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\dispatchers\dispatcher.js:105:30)
+    at Page.&lt;anonymous&gt; (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\dispatchers\pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\page.js:172:10)
+    at CRPage.didClose (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\chromium\crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\chromium\crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\chromium\crConnection.js:138:14
 }
-Call log:
--   - waiting for locator(&quot;#ctl00_MainContent_RadGrid1_ctl00_ctl02_ctl00_lbAddWorkorder&quot;)
-
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 34 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">CoreTests.WorkorderTest#workorder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th></tr><tr class="param stripe"><td>alpha</td><td>Harsco123!</td><td>11957</td><td>582</td><td>Abadia, Julio</td><td>Conduit, Steven</td><td>Almonte, Sonya</td><td>3308 - Chemical Reclamation Services</td><td>DM</td><td>P</td></tr><tr><th colspan="10">Exception</th></tr><tr><td colspan="10"><div class="stacktrace">com.microsoft.playwright.impl.TargetClosedError: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;TargetClosedError
+  stack=&apos;TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\dispatchers\dispatcher.js:256:69)
+    at transport.onmessage (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\cli\driver.js:53:59)
+    at Immediate._onImmediate (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\utils\pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
 	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
 	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
 	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
-	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:232)
-	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:164)
-	at com.microsoft.playwright.Locator.click(Locator.java:2500)
-	at CorePages.WorkorderPage.wordr(WorkorderPage.java:113)
-	at CoreTests.WorkorderTest.workorder(WorkorderTest.java:18)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:985)
+	at com.microsoft.playwright.impl.FrameImpl.waitForSelector(FrameImpl.java:975)
+	at com.microsoft.playwright.impl.LocatorImpl.elementHandle(LocatorImpl.java:211)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$withElement$0(LocatorImpl.java:80)
+	at com.microsoft.playwright.impl.ChannelOwner.withTitle(ChannelOwner.java:98)
+	at com.microsoft.playwright.impl.LocatorImpl.withElement(LocatorImpl.java:71)
+	at com.microsoft.playwright.impl.LocatorImpl.scrollIntoViewIfNeeded(LocatorImpl.java:486)
+	at com.microsoft.playwright.Locator.scrollIntoViewIfNeeded(Locator.java:4440)
+	at CorePages.WorkorderPage.newworder(WorkorderPage.java:135)
+	at CoreTests.WorkorderTest.workorder(WorkorderTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -136,15 +135,15 @@ Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
   message=&apos;Target page, context or browser has been closed
   name=&apos;TargetClosedError
   stack=&apos;TargetClosedError: Target page, context or browser has been closed
-    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-17170967552292787042\package\lib\server\dispatchers\dispatcher.js:333:15)
+    at DispatcherConnection.dispatch (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\dispatchers\dispatcher.js:256:69)
+    at transport.onmessage (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\cli\driver.js:53:59)
+    at Immediate._onImmediate (C:\Users\KSHYAM~1\AppData\Local\Temp\playwright-java-4214809758577771696\package\lib\server\utils\pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
 }
-Call log:
--   - waiting for locator(&quot;#ctl00_MainContent_RadGrid1_ctl00_ctl02_ctl00_lbAddWorkorder&quot;)
-
 	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
 	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 36 more
+	... 40 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
